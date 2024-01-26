@@ -44,15 +44,13 @@ class MyApp extends StatelessWidget {
                     spreadRadius: 20.0,
                     blurRadius: 40.0,
                     offset: Offset(40, 60),
-                    // shape: BoxShape.circle,  
+                    // shape: BoxShape.circle,
                   )
                 ]),
             child: const Text(
               'Félicitations!',
               style: textStyle,
               textDirection: TextDirection.ltr,
-            )
-        )
-    );
+            )));
   }
 }

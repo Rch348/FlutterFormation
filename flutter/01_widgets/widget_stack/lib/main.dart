@@ -25,10 +25,14 @@ class MyApp extends StatelessWidget {
           color: Colors.purple,
         ),
         Container(
-          width: 100,
-          height: 100,
+          width: 190,
+          height: 190,
           color: Colors.green,
         ),
+        const Text(
+          'Salut',
+          textDirection: TextDirection.ltr,
+          )
       ]
     );
   }
