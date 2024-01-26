@@ -7,6 +7,12 @@ List<Map<String, dynamic>> gagnants = [];
 
 Random hasard = Random();
 
+void afficherLot() {
+  return print('Voici les lots disponibles : ${lots}');
+}
+
+void afficherBillet() {}
+
 void ajouterLot() {
   print('Saisir un lot à ajouter à la liste :');
   String champLot = stdin.readLineSync()!;
@@ -36,16 +42,14 @@ void acheterBillets() {
 void effectuerTirage() {
   print('Saisir un nombre de gagnants :');
   int champGagnant = int.parse(stdin.readLineSync()!);
-  while (champGagnant > lots.length) {
+  while (champGagnant > lots.length + 1) {
     print(
         'Le nombre de gagnants saisi est supérieur au nombre de lots disponible. Saisir un nombre inférieur !');
     champGagnant = int.parse(stdin.readLineSync()!);
   }
   for (int i = 1; i <= champGagnant; i++) {
     int aleat = hasard.nextInt(billets.length);
-    if (aleat != gagnants[aleat]){
-      
-    }
+    if (aleat != gagnants[aleat]) {}
     gagnants.add(billets[aleat]);
   }
   print(gagnants);
