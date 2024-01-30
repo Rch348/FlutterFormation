@@ -15,6 +15,15 @@ class MyApp extends StatelessWidget {
       title: 'Home Page',
       theme: ThemeData(colorSchemeSeed: Colors.red),
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('HomePage'),
+          elevation: 5, // Lors du scroll, les éléments 
+          backgroundColor: Colors.blue,
+          // titleTextStyle: TextStyle(),
+          actions: [
+            IconButton(onPressed: () => {print('click')}, icon: Icon(Icons.more_vert))
+          ],
+        ),
         body: Container(
           alignment: Alignment.center,
           child: const Text('Salut Tout Le Monde!'),
