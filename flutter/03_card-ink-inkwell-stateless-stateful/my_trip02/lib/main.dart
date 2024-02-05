@@ -29,11 +29,13 @@ class MyTrip extends StatelessWidget {
                           elevation: 2,
                           child: Container(
                             height: 150,
-                            child: Stack(fit: StackFit.expand, children: [
-                              Image.asset(
-                                'assets/images/Montpellier.jpeg',
-                                fit: BoxFit.fitWidth,
-                              ),
+                            child: Stack(
+                              fit: StackFit.expand, 
+                              children: [
+                                Image.asset(
+                                  'assets/images/Montpellier.jpeg',
+                                  fit: BoxFit.fitWidth,
+                                ),
 // Column : Pas le + optimisé mais utile si d'autres fonctionnalités à ajouter :
                               // Column(
                               //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
