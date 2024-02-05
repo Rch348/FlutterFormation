@@ -38,7 +38,8 @@ class _HomeState extends State<Home> {
         body: Container(
             padding: EdgeInsets.all(10),
             color: Colors.grey[100],
-            child: Column(
+            child: SingleChildScrollView(
+              child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch, 
               children: [
 
@@ -51,8 +52,8 @@ class _HomeState extends State<Home> {
                 // CityCard(
                 //   name: 'Montpellier', image: 'assets/images/Montpellier.jpeg'),
                 // CityCard(name: 'Peyrou', image: 'assets/images/Peyrou.jpeg'),
-          ])),
-          bottomNavigationBar: BottomNavigationBar(
+          ]))),
+        bottomNavigationBar: BottomNavigationBar(
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
@@ -67,7 +68,7 @@ class _HomeState extends State<Home> {
                 label: 'MoveTo'
               )
             ]
-          ),
+        ),
     );
   }
 } 
