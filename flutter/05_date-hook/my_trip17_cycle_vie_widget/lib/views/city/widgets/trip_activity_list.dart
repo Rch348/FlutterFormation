@@ -6,7 +6,7 @@ class TripActivityList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Trip activity list'),
+      child: const Text('Trip activity list'),
     );
   }
 }

@@ -18,11 +18,11 @@ class _CityState extends State<City> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          leading: Icon(Icons.chevron_left),
-          title: Text('Montpellier'),
-          actions: [Icon(Icons.more_vert)]),
+          leading: const Icon(Icons.chevron_left),
+          title: const Text('Montpellier'),
+          actions: const [Icon(Icons.more_vert)]),
       body: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
               for(var activity in activities)

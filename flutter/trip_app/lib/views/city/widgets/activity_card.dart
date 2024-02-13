@@ -27,7 +27,6 @@ class ActivityCard extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(10),
             child: Column(
               children: [
                 Expanded(
@@ -45,43 +44,7 @@ class ActivityCard extends StatelessWidget {
                   ),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Flexible(
-                      child: FittedBox(
-                          child: Text(
-                        activity.name,
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )),
-                    ),
-                  ],
-                  // children: [
-                  //   Flexible(
-                  //     flex: 2,
-                  //     fit: FlexFit.tight,
-                  //     child: Container(
-                  //       color: Colors.blue,
-                  //       // height: 50,
-                  //       child: Text(activity.name, style: TextStyle(fontSize: 20, color: Colors.white),),
-                  //     ),
-                  //     ),
-                  //   Flexible(
-                  //     flex: 1,
-                  //     fit: FlexFit.tight,
-                  //     child: Container(
-                  //       color: Colors.red,
-                  //       height: 50,
-                  //     ),
-                  //   ),
-                  //   Flexible(
-                  //     flex: 1,
-                  //     fit: FlexFit.tight,
-                  //     child: Container(
-                  //       color: Colors.green,
-                  //       height: 50,
-                  //     ),
-                  //   ),
-                  // ],
+                  children: [Text(activity.name, style: TextStyle(fontSize: 20, color: Colors.white),)],
                 )
               ],
             ),

@@ -22,16 +22,16 @@ class _CityState extends State<City> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
-        title: Text('Paris'),
-        actions: [Icon(Icons.more_vert)],
+        leading: const Icon(Icons.arrow_back),
+        title: const Text('Paris'),
+        actions: const [Icon(Icons.more_vert)],
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
             Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 height: 200,
                 color: Colors.white,
                 child: Column(
@@ -45,7 +45,7 @@ class _CityState extends State<City> {
                         ),
                         ElevatedButton(
                             onPressed: () {},
-                            child: Text('Sélectionner une date'))
+                            child: const Text('Sélectionner une date'))
                       ],
                     )
                   ],

@@ -20,7 +20,7 @@ class _MyWidgetState extends State<Toggle> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(top: 400),
+        padding: const EdgeInsets.only(top: 400),
         child: Column(children: [
           FilledButton(
               onPressed: _toggle,
@@ -31,7 +31,7 @@ class _MyWidgetState extends State<Toggle> {
           Text(
               // clicked ? 'Le bouton est désactivé' : 'Le bouton est activé',
               'Le bouton est ${clicked ? 'activé' : 'désactivé'}',
-              style: TextStyle(fontSize: 20))
+              style: const TextStyle(fontSize: 20))
         ]));
   }
 }

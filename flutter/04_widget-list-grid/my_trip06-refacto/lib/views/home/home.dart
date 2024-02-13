@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     List<Widget> allWidgets = [];
 
-    for (var city in cities)
+    for (var city in cities) {
       allWidgets.add(CityCard(
           name: city['name'],
           image: city['image'],
@@ -40,6 +40,7 @@ class _HomeState extends State<Home> {
           updateFavorite: () {
             switchFavorite(city);
           }));
+    }
 
     return Scaffold(
       appBar: AppBar(

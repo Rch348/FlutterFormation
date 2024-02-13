@@ -22,7 +22,7 @@ class _CityState extends State<City> {
   void setDate() {
     showDatePicker(
       context: context,
-      initialDate: DateTime.now().add(Duration(days: 1)),
+      initialDate: DateTime.now().add(const Duration(days: 1)),
       firstDate: DateTime.now(),
       lastDate: DateTime(2025),
     ).then((newDate) {
@@ -40,12 +40,12 @@ class _CityState extends State<City> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
-        title: Text('Organiisation voyage'),
-        actions: [Icon(Icons.more_vert)],
+        leading: const Icon(Icons.arrow_back),
+        title: const Text('Organiisation voyage'),
+        actions: const [Icon(Icons.more_vert)],
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

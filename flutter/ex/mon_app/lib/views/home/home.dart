@@ -14,19 +14,19 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.home),
-          title: const Text(
+          leading: Icon(Icons.home),
+          title: Text(
             'LeBonCoin',
             style: TextStyle(fontWeight: FontWeight.w900),
           ),
-          actions: const [Icon(Icons.more_vert)],
+          actions: [Icon(Icons.more_vert)],
         ),
         body: Container(
           alignment: Alignment.center,
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
           color: Colors.grey,
           // child: GridView.builder(
-          //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           //         crossAxisCount: 2),
           //     itemBuilder: (context, index) {
 

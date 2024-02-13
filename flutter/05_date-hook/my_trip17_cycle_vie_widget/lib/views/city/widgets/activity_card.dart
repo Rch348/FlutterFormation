@@ -11,7 +11,7 @@ class ActivityCard extends StatelessWidget {
     
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       child: Column(
         children: [
           // Text(activity.name),

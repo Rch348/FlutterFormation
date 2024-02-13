@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(colorSchemeSeed: Colors.red),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('HomePage'),
+          title: const Text('HomePage'),
           elevation: 5, // Lors du scroll, les éléments 
           backgroundColor: Colors.blue,
           // titleTextStyle: TextStyle(),
           actions: [
-            IconButton(onPressed: () => {print('click')}, icon: Icon(Icons.more_vert))
+            IconButton(onPressed: () => {print('click')}, icon: const Icon(Icons.more_vert))
           ],
         ),
         body: Container(
@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
             ]),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed:() => {print('click')}, child: Icon(Icons.more_vert) ),
+          onPressed:() => {print('click')}, child: const Icon(Icons.more_vert) ),
       )
     );
   }

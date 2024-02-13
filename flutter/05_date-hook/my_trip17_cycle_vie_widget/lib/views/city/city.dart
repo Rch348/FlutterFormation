@@ -46,7 +46,7 @@ class _CityState extends State<City> {
   void setDate() {
     showDatePicker(
       context: context,
-      initialDate: DateTime.now().add(Duration(days: 1)),
+      initialDate: DateTime.now().add(const Duration(days: 1)),
       firstDate: DateTime.now(),
       lastDate: DateTime(2025),
     ).then((newDate) {
@@ -70,32 +70,32 @@ class _CityState extends State<City> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),  
-        title: Text('Organiisation voyage'),
-        actions: [Icon(Icons.more_vert)],
+        title: const Text('Organiisation voyage'),
+        actions: const [Icon(Icons.more_vert)],
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             IconButton(onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => const Home()),
                   );
-                }, icon: Icon(Icons.arrow_back)),
+                }, icon: const Icon(Icons.arrow_back)),
             TripOverview(setDate: setDate, trip: mytrip),
             Expanded(
               // child: ActivityList(activities: widget.activities)
               // child: TripActivityList()
-              child: index == 0 ? ActivityList(activities: widget.activities) : TripActivityList(),
+              child: index == 0 ? ActivityList(activities: widget.activities) : const TripActivityList(),
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
-        items: [
+        items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.map),
           label: 'Découverte',

@@ -26,17 +26,17 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(top: 400),
+        padding: const EdgeInsets.only(top: 400),
         
         child: Column(children: [
-          Text('${price * _count}', style: TextStyle(fontSize: 30)),
+          Text('${price * _count}', style: const TextStyle(fontSize: 30)),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(onPressed: decrementer, child: Text('-1')),
-              Text(' $_count', style: TextStyle(fontSize: 20)),
-              ElevatedButton(onPressed: incrementer, child: Text('+1')),
+              ElevatedButton(onPressed: decrementer, child: const Text('-1')),
+              Text(' $_count', style: const TextStyle(fontSize: 20)),
+              ElevatedButton(onPressed: incrementer, child: const Text('+1')),
             ],
           )
         ]));

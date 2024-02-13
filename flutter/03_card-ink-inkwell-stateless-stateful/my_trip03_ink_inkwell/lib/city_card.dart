@@ -13,7 +13,7 @@ class CityCard extends StatelessWidget {
     return Card(
         surfaceTintColor: Color.fromRGBO(255, 255, 255, 1),
         elevation: 2,
-        child: Container(
+        child: SizedBox(
           height: 150,
           child: Stack(fit: StackFit.expand, children: [
             Image.asset(

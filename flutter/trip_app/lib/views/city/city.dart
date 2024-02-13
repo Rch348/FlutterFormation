@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
-
 import 'package:flutter/material.dart';
 
 import 'package:trip_app/datas/data.dart' as data;
@@ -8,7 +6,7 @@ import 'package:trip_app/models/trip_model.dart';
 import 'package:trip_app/views/city/widgets/activity_list.dart';
 import 'package:trip_app/views/city/widgets/trip_activity_list.dart';
 import 'package:trip_app/views/city/widgets/trip_overview.dart';
-// import 'package:trip_app/views/home/home.dart';
+import 'package:trip_app/views/home/home.dart';
 
 class City extends StatefulWidget {
   City({super.key});
@@ -29,12 +27,6 @@ class _CityState extends State<City> {
 
     mytrip = Trip(city: 'Paris', activities: [], date: DateTime.now());
     index = 0;
-  }
-
-  List<Activity> get tripActivities {
-    return widget.activities
-        .where((activity) => mytrip.activities.contains(activity.id))
-        .toList();
   }
 
   void setDate() {
@@ -58,28 +50,19 @@ class _CityState extends State<City> {
     });
   }
 
-  void toggleActivity(String id) {
-    setState(() {
-      mytrip.activities.contains(id)
-          ? mytrip.activities.remove(id)
-          : mytrip.activities.add(id);
-    });
-  }
-
-  void deleteTripActivity(String id) {
-    setState(() {
-      mytrip.activities.remove(id);
-    });
+  void toggleActivity(String id){
+      setState(() {
+        mytrip.activities.contains(id) ? mytrip.activities.remove(id) : mytrip.activities.add(id);
+      });
   }
 
   @override
   Widget build(BuildContext context) {
-    print(mytrip.activities);
-
+    print('Build city');
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),
-        title: Text('Organisation voyage'),
+        title: Text('Organiisation voyage'),
         actions: [Icon(Icons.more_vert)],
       ),
       body: Container(
@@ -87,14 +70,14 @@ class _CityState extends State<City> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // IconButton(
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context,
-            //         MaterialPageRoute(builder: (context) => Home()),
-            //       );
-            //     },
-                // icon: Icon(Icons.arrow_back)),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home()),
+                  );
+                },
+                icon: Icon(Icons.arrow_back)),
             TripOverview(setDate: setDate, trip: mytrip),
             Expanded(
               // child: ActivityList(activities: widget.activities)
@@ -105,9 +88,7 @@ class _CityState extends State<City> {
                       selectedActivities: mytrip.activities,
                       toggleActivity: toggleActivity,
                     )
-                  : TripActivityList(
-                      activities: tripActivities,
-                      deleteTripActivity: deleteTripActivity),
+                  : TripActivityList(),
             ),
           ],
         ),
