@@ -11,64 +11,56 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   List cities = [
-    {'name': 'Montpellier','image': 'assets/images/Montpellier.jpeg','favorite': false},
+    {
+      'name': 'Montpellier',
+      'image': 'assets/images/Montpellier.jpeg',
+      'favorite': false
+    },
     {'name': 'Peyrou', 'image': 'assets/images/Peyrou.jpeg', 'favorite': false},
     {'name': 'Travers', 'image': 'assets/images/Travers.png', 'favorite': false}
   ];
 
-  void switchFavorite(city){
+  void switchFavorite(city) {
     int index = cities.indexOf(city);
     setState(() {
       cities[index]['favorite'] = !cities[index]['favorite'];
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
+    List<Widget> allWidgets = [];
+
+    for (var city in cities)
+      allWidgets.add(CityCard(
+          name: city['name'],
+          image: city['image'],
+          favorite: city['favorite'],
+          updateFavorite: () {
+            switchFavorite(city);
+          }));
+
     return Scaffold(
-        appBar: AppBar(
-            // centerTitle: true,
-            leading: Icon(Icons.home),
-            title: Text('MyTrip'),
-            actions: [Icon(Icons.more_vert)]
-        ),
-        body: Container(
-            padding: EdgeInsets.all(10),
-            color: Colors.grey[100],
-            child: SingleChildScrollView(
+      appBar: AppBar(
+          // centerTitle: true,
+          leading: Icon(Icons.home),
+          title: Text('MyTrip'),
+          actions: [Icon(Icons.more_vert)]),
+      body: Container(
+          padding: EdgeInsets.all(10),
+          color: Colors.grey[100],
+          child: SingleChildScrollView(
               child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch, 
-              children: [
-
-                for(var city in cities)
-                  CityCard(name: city['name'], image: city['image'], favorite: city['favorite'], updateFavorite: (){
-                    switchFavorite(city);
-                  }),
-        
-
-                // CityCard(
-                //   name: 'Montpellier', image: 'assets/images/Montpellier.jpeg'),
-                // CityCard(name: 'Peyrou', image: 'assets/images/Peyrou.jpeg'),
-          ]))),
-        bottomNavigationBar: BottomNavigationBar(
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.flight_land),
-                label: 'Land'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.motorcycle),
-                label: 'MoveTo'
-              )
-            ]
-        ),
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: allWidgets
+                  
+                ))),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.flight_land), label: 'Land'),
+        BottomNavigationBarItem(icon: Icon(Icons.motorcycle), label: 'MoveTo')
+      ]),
     );
   }
-} 
+}
