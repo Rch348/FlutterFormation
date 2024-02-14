@@ -7,7 +7,7 @@ import 'package:trip_app/models/trip_model.dart';
 import 'package:trip_app/views/city/widgets/activity_list.dart';
 import 'package:trip_app/views/city/widgets/trip_activity_list.dart';
 import 'package:trip_app/views/city/widgets/trip_overview.dart';
-import 'package:trip_app/views/home/home_view.dart';
+// import 'package:trip_app/views/home/home_view.dart';
 
 class CityView extends StatefulWidget {
   CityView({super.key});

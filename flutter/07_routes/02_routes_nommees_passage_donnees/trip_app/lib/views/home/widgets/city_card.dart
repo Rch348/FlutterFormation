@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/city_model.dart';
-import 'package:trip_app/views/city/city_view.dart';
+// import 'package:trip_app/views/city/city_view.dart';
 
 class CityCard extends StatelessWidget {
   final City city;

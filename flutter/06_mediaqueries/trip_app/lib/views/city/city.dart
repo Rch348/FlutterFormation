@@ -6,7 +6,7 @@ import 'package:trip_app/models/trip_model.dart';
 import 'package:trip_app/views/city/widgets/activity_list.dart';
 import 'package:trip_app/views/city/widgets/trip_activity_list.dart';
 import 'package:trip_app/views/city/widgets/trip_overview.dart';
-import 'package:trip_app/views/home/home.dart';
+// import 'package:trip_app/views/home/home.dart';
 
 class City extends StatefulWidget {
   City({super.key});
