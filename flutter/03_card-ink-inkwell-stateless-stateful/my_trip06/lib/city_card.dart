@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables, sized_box_for_whitespace, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class CityCard extends StatelessWidget {
@@ -51,7 +53,7 @@ class CityCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
 
                     children: [
-                      // Icon(Icons.favorite, size: 40,color: Colors.white,),
+                      // Icon(Icons.favorite, size: 40, color: Colors.white,),
                       Text(
                         name,
                         style: TextStyle(color: Colors.white, fontSize: 30),

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:my_trip06/city_card.dart';
 
@@ -47,8 +49,6 @@ class _HomeState extends State<Home> {
                     switchFavorite(city);
                   }),
                 
-                // CityCard(name: 'Londres', image: 'assets/images/londres.jpeg',),
-                // CityCard(),
               ],
             )),
           bottomNavigationBar: BottomNavigationBar(

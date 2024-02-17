@@ -12,11 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List cities = [
-    {
-      'name': 'Montpellier',
-      'image': 'assets/images/Montpellier.jpeg',
-      'favorite': false
-    },
+    {'name': 'Montpellier','image': 'assets/images/Montpellier.jpeg','favorite': false},
     {'name': 'Peyrou', 'image': 'assets/images/Peyrou.jpeg', 'favorite': false},
     {'name': 'Travers', 'image': 'assets/images/Travers.png', 'favorite': false}
   ];
