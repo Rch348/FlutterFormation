@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return Stack(
       textDirection: TextDirection.ltr,
       alignment: Alignment.center,
+      clipBehavior: Clip.hardEdge,
       children : [
         Container(
           width: 400,

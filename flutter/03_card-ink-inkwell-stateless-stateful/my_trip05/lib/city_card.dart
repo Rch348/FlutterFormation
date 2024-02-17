@@ -14,7 +14,8 @@ class CityCard extends StatelessWidget {
       required this.name,
       required this.image,
       required this.favorite,
-      required this.updateFavorite});
+      required this.updateFavorite
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +27,14 @@ class CityCard extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand, 
             children: [
-            Ink.image(
-              fit: BoxFit.fitWidth,
-              image: AssetImage(image),
-              child: InkWell(
-                onTap: updateFavorite,)
-            ),
-            Container(
+              Ink.image(
+                fit: BoxFit.fitWidth,
+                image: AssetImage(image),
+                child: InkWell(
+                  onTap: updateFavorite,
+                )
+              ),  
+              Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: [

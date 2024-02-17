@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             textDirection: TextDirection.ltr,
             children: [
               Expanded(

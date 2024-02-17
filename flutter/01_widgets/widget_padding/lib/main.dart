@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.red,
                 border: Border.all(
-                    color: Colors.teal, width: 3.00, style: BorderStyle.solid),
+                    color: Colors.teal, width: 10.00, style: BorderStyle.solid),
                 boxShadow: const [
               BoxShadow(
-                  color: Colors.black, spreadRadius: 15.0, blurRadius: 10.0)
+                  color: Colors.amber, spreadRadius: 15.0, blurRadius: 10.0)
             ])));
   }
 }

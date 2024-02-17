@@ -31,12 +31,19 @@ class MyTrip extends StatelessWidget {
                           )),
                       Card(
                           elevation: 5,
-                          child: SizedBox(
+                          child: 
+                            SizedBox(
                               height: 150,
-                              child: Stack(fit: StackFit.expand, children: [
-                                Image.asset('assets/images/Montpellier.jpeg',
-                                    fit: BoxFit.cover)
-                              ]))),
+                              child: 
+                                Stack(
+                                  fit: StackFit.expand, 
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/Montpellier.jpeg',
+                                      fit: BoxFit.cover
+                                    )
+                              ]))
+                      ),
                       Card(
                           elevation: 5,
                           child: Container(

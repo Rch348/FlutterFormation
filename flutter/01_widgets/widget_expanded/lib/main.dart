@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           height: 150.0,
         ),
         Expanded(
-            // Flex dit au conteneur ambre de prendre 2 fois la taille du conteneur vert
+            // Flex dit au conteneur ambre de prendre 2 fois la taille du conteneur marron
             flex: 2,
             child: Container(
               color: Colors.amber,

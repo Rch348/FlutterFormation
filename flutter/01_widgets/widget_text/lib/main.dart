@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
     //   ),
     // );
 
-    return const Center(
+    return Center(
       child: Text.rich(
           TextSpan(
             text: 'Fr',
@@ -51,12 +53,11 @@ class MyApp extends StatelessWidget {
             ]
           ),
           textDirection: TextDirection.ltr,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 50.0,
           ),
         ),
       );
-
   }
 }
 

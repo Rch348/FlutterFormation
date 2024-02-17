@@ -1,6 +1,7 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -12,56 +13,53 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Home Page',
-      theme: ThemeData(colorSchemeSeed: Colors.red),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('HomePage'),
-          elevation: 5, // Lors du scroll, les éléments 
-          backgroundColor: Colors.blue,
-          // titleTextStyle: TextStyle(),
-          actions: [
-            IconButton(onPressed: () => {print('click')}, icon: const Icon(Icons.more_vert))
-          ],
-        ),
-        body: Container(
-          alignment: Alignment.center,
-          child: const Text('Salut Tout Le Monde!'),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Symbols.home),
-              label: 'Home' 
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.flight_land),
-              label: 'Land'
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.cruelty_free),
-              label: 'Lapin crétin'
-            ),
-          ],
-          
-        ),
-        drawer: const Drawer(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Icon(Icons.account_circle),
-                  Text('Profil'),
-                ],
+        title: 'Home Page',
+        theme: ThemeData(colorSchemeSeed: Colors.blue,),
+        home: Scaffold(
+          body: Container(
+            alignment: Alignment.center,
+            child: Text('Salut Tout le monde!'),
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
               ),
-              Row(
-                children: [
-                  Icon(Icons.settings),
-                  Text('Paramètres'),
-                ],
-              )
-            ]),
+              BottomNavigationBarItem(
+                icon: Icon(Symbols.travel),
+                label: 'Land',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.motorcycle),
+                label: 'MoveTo',
+              ),
+            ], 
+          ),
+          drawer: Drawer(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(20) ,
+                  child: Row(
+                    children: [
+                      Icon(Icons.account_circle),
+                      Text('Profil')
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(20) ,
+                  child: Row(
+                    children: [
+                      Icon(Icons.settings),
+                    Text('Paramètres')
+                    ],
+                  ),
+                ),
+              ]
+          ),
         ),
       )
     );

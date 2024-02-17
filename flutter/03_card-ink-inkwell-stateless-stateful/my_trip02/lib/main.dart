@@ -36,6 +36,7 @@ class MyTrip extends StatelessWidget {
                                   'assets/images/Montpellier.jpeg',
                                   fit: BoxFit.fitWidth,
                                 ),
+
 // Column : Pas le + optimisé mais utile si d'autres fonctionnalités à ajouter :
                               // Column(
                               //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,6 +63,7 @@ class MyTrip extends StatelessWidget {
                               //     )
                               //   ],
                               // )
+
 // OU : Container (le + rapide, simple et optimisé) :
                               // Container(
                               //     // padding: EdgeInsets.only(left: 10, right: 20, bottom: 30, top: 40),
@@ -81,6 +83,7 @@ class MyTrip extends StatelessWidget {
                               //       style: TextStyle(
                               //           color: Colors.white, fontSize: 25),
                               //     ))
+
 // OU 
                               // Container(
                               //   padding: EdgeInsets.all(10),
@@ -109,6 +112,7 @@ class MyTrip extends StatelessWidget {
                               //     ],
                               //   ),
                               // )
+                              
                               Container(
                                 padding: EdgeInsets.all(10),
                                 child: Column(

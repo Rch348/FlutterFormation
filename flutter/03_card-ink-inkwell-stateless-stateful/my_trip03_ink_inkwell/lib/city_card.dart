@@ -1,5 +1,18 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+/*
+  Définition de la classe CityCard{name, image} et gestion de la mise en forme des cartes représentant les villes :
+  - Card
+  -- SizedBox (dimension)
+  --- Stack (superposition)
+  ---- Image
+  ---- Container
+  ----- Column
+  ------ Expanded (étalement de la Row sur toute la place disponible)
+  ------- Row (1ère ligne contenant l'icône favori)
+  ------- Row (2ème ligne contenant le nom de la ville)
+*/
+
 import 'package:flutter/material.dart';
 
 class CityCard extends StatelessWidget {
