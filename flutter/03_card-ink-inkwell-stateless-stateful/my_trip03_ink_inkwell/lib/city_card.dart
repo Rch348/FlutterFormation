@@ -49,7 +49,11 @@ class CityCard extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: TextStyle(color: Colors.white, fontSize: 25))
+                        style: TextStyle(
+                          color: Colors.white, 
+                          fontSize: 25
+                        )
+                      )
                     ],
                   )
                 ])),

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 /*
-  Rendre dynamique la carte d'une ville pour la mettre en favori.
+  Rendre dynamique la carte d'une ville pour la mettre en favori : Stateful sur la classe Home (_HomeState).
 */
 
 import 'package:flutter/material.dart';
