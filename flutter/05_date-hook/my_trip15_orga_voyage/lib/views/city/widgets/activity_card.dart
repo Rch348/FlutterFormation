@@ -1,3 +1,7 @@
+/*
+  Affichage de l'image d'une activité sur une carte.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:my_trip15_orga_voyage/models/activity_model.dart';
 
@@ -15,7 +19,10 @@ class ActivityCard extends StatelessWidget {
       child: Column(
         children: [
           // Text(activity.name),
-          Image.asset(activity.image, fit: BoxFit.cover,),
+          Image.asset(
+            activity.image, 
+            fit: BoxFit.cover,
+          ),
         ],
       ),
     );

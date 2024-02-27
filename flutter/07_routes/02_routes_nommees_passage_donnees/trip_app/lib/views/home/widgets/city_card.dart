@@ -30,7 +30,9 @@ class CityCard extends StatelessWidget {
                   //     },
                   //   ),
                   // );
-
+                  
+                  // arguments: city => au cas où on veut passer des données à CityView (jettera une erreur car
+                  // on envoie pas de données et ne peut accepter de type Null)
                   Navigator.pushNamed(context, '/city', arguments: city);
 
                 },

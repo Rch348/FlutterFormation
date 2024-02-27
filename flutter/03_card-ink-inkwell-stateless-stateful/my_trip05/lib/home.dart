@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_trip05/city_card.dart';
 
+// Ici sera ajouté tout ce qui restera statique (ce qui ne changera pas).
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -21,6 +22,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+// Ici sera ajouté tout ce qui sera dynamique (ce qui va changer).
 class _HomeState extends State<Home> {
 
   List cities = [

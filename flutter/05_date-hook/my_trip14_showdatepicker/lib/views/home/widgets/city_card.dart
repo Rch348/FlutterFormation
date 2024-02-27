@@ -53,7 +53,10 @@ class CityCard extends StatelessWidget {
                       // Icon(Icons.favorite, size: 40,color: Colors.white,),
                       Text(
                         name,
-                        style: const TextStyle(color: Colors.white, fontSize: 30),
+                        style: const TextStyle(
+                          color: Colors.white, 
+                          fontSize: 30
+                        ),
                       )
                     ],
                   ),

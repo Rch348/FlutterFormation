@@ -44,8 +44,12 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         // centerTitle: true,
-        leading: const Icon(Icons.home),
-        title: const Text('MyTrip'),
+        leading: const Icon(
+          Icons.home
+        ),
+        title: const Text(
+          'MyTrip'
+        ),
         actions: const [
           Icon(Icons.more_vert),
         ],
@@ -64,25 +68,29 @@ class _HomeState extends State<Home> {
                       favorite: city['favorite'],
                       updateFavorite: () {
                         switchFavorite(city);
-                      }),
-            
-                // CityCard(name: 'Londres', image: 'assets/images/londres.jpeg',),
-                // CityCard(),
+                      }
+                  ),
               ],
             ),
           )),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.flight_land),
+            icon: Icon(
+              Icons.flight_land
+            ),
             label: 'Land',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.motorcycle),
+            icon: Icon(
+              Icons.motorcycle
+            ),
             label: 'MoveTo',
           ),
         ],

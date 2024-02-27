@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:trip_app/datas/data.dart' as data;
 import 'package:trip_app/models/activity_model.dart';
 import 'package:trip_app/models/trip_model.dart';
@@ -13,10 +12,10 @@ class CityView extends StatefulWidget {
 
   final List<Activity> activities = data.activities;
 
-  // fonction qui décide de la structure d'affichage en fonction de l'orientation du téléphone 
+  // Fonction qui décide de la structure d'affichage en fonction de l'orientation du téléphone 
   showContext({ required BuildContext context, required List<Widget> children }){
 
-    // on récupere l'orientation du téléphone
+    // Récupération de l'orientation du téléphone
     var orientation = MediaQuery.of(context).orientation;
 
     if( orientation == Orientation.landscape ){
@@ -88,7 +87,7 @@ class _CityViewState extends State<CityView> {
 
   @override
   Widget build(BuildContext context) {
-
+    // Contrôle dans le terminal de l'id des activités sélectionnées.
     print('liste des activités selectionnées : ${mytrip.activities}');
 
     return Scaffold(

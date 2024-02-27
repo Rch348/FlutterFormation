@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/city_model.dart';
-import 'package:trip_app/views/city/city_view.dart';
+// import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/widgets/city_card.dart';
 import 'package:trip_app/datas/data.dart' as data;
 

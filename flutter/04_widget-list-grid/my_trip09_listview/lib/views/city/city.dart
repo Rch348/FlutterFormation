@@ -33,6 +33,8 @@ class _CityState extends State<City> {
       ),
       body: Container(
         padding: EdgeInsets.all(10),
+        
+        // Ce que l'on avait :
         // child: Column(
         //   children: [
         //     for(var activity in widget.activities)
@@ -40,29 +42,34 @@ class _CityState extends State<City> {
         //   ],
         // ),
 
-        // premier façon pas tres optimisé si vous avez beaucoup de données
+        // Première façon pas très optimisée si beaucoup de données :
         // child: ListView(
-        //   children: 
-        //     // for(var activity in widget.activities)
-        //     //   ActivityCard(activity: activity),
+          // children: 
+            // Boucle dans le widget (car stateful) activities (liste définie + haut)
+            // for(var activity in widget.activities)
+            //   ActivityCard(activity: activity),
 
-        //     // widget.activities.map((activity) {
-        //     //   return ActivityCard(activity: activity);
-        //     // }).toList(),
+            // Méthode .map sur le widget liste activities prenant en argument activity pour renvoyer la classe ActivityCard
+            // widget.activities.map((activity) {
+            //   return ActivityCard(activity: activity);
+            // // Méthode .toList pour convertir en liste.
+            // }).toList(),
 
-        //     widget.activities.map((activity) => ActivityCard(activity: activity)).toList(),
+            // widget.activities.map((activity) => ActivityCard(activity: activity)).toList(),        
         // ),
 
-        // le plus opti et le plus utilisé
+        // Le plus opti et le plus utilisé :
         // child: ListView.builder(
         //   itemBuilder: (context, index) => ActivityCard(activity: widget.activities[index]),
         //   itemCount: widget.activities.length,
         // ),
 
+        // Separated : pour séparer chaque carte avec separatorBuilder pour le personnaliser.
         child: ListView.separated(
           itemBuilder: (context, index) => ActivityCard(activity: widget.activities[index]),
           // separatorBuilder: (context, index) => Divider(),
-          separatorBuilder: (context, index) => SizedBox(height: 50,),
+          separatorBuilder: (context, index) => SizedBox(height: 50),
+          // Récupère la longueur de la liste activities
           itemCount: widget.activities.length,
         ),
 

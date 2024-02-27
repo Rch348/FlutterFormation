@@ -15,10 +15,13 @@ class ActivityCard extends StatelessWidget {
       child: Column(
         children: [
           // Text(activity.name),
-          Image.asset(activity.image, fit: BoxFit.cover,),
+          Image.asset(
+            activity.image, 
+            fit: BoxFit.cover,
+          ),
         ],
       ),
     );
-
+    
   }
 }

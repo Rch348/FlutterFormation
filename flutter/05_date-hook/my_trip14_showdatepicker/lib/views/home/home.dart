@@ -44,7 +44,9 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         // centerTitle: true,
-        leading: const Icon(Icons.home),
+        leading: const Icon(
+          Icons.home
+        ),
         title: const Text('MyTrip'),
         actions: const [
           Icon(Icons.more_vert),

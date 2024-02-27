@@ -1,3 +1,7 @@
+/*
+  Routes dynamiques (onGenerateRoute()) et routes par défault (onUnknownRoute())
+*/
+
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 import 'package:trip_app/models/city_model.dart';
@@ -35,6 +39,7 @@ class MyTrip extends StatelessWidget {
           final City city = settings.arguments as City;
           return MaterialPageRoute(builder: (context) => CityView(city: city));
         }
+        return null;
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (context) => NotFound());

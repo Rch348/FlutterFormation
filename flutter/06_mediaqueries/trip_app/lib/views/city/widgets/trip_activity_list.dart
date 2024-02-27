@@ -12,13 +12,13 @@ class TripActivityList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
-        //plus optimisé
+        // Plus optimisé
         // var activity = activities[index];
         return Card(
           child: ListTile(
             leading: CircleAvatar(
-              // backgroundImage: AssetImage(activity.image),
-              backgroundImage: AssetImage(activities[index].image),
+            // backgroundImage: AssetImage(activity.image),
+            backgroundImage: AssetImage(activities[index].image),
             ),
             // title: Text(activity.name),
             title: Text(activities[index].name),

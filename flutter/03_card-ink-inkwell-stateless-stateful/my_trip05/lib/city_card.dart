@@ -29,9 +29,11 @@ class CityCard extends StatelessWidget {
         elevation: 2,
         child: Container(
           height: 150,
+          // Stack pour ajouter le container (L44).
           child: Stack(
             fit: StackFit.expand, 
             children: [
+              // Premier widget Ink.image requis pour visualiser l'effet car si directement child: Inkwell, l'effet sera en dessous de l'image. 
               Ink.image(
                 fit: BoxFit.fitWidth,
                 image: AssetImage(image),

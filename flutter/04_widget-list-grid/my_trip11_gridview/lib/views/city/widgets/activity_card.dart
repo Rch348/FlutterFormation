@@ -26,9 +26,17 @@ class ActivityCard extends StatelessWidget {
 
     return Card(
       child: ListTile(
-       leading: CircleAvatar(backgroundImage: AssetImage(activity.image),),
-       title: Text(activity.name),
-       subtitle: Text(activity.city),
+        leading: CircleAvatar(
+          backgroundImage: AssetImage(
+            activity.image
+          ),
+        ),
+        title: Text(
+          activity.name
+        ),
+        subtitle: Text(
+          activity.city
+        ),
       ),
     );
   }

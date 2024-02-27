@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 /*
-  Classe ActivityCard avec propriété activity pemettant d'accéder au nom de l'activité, à l'image et à la ville où elle se déroule
-  (et à l'id) grâce à l'import d'activity_model.dart (classe Activity) 
+  Classe ActivityCard avec variable (non connue d'avance) activity pemettant d'accéder à l'activité en question 
+  définie dans la classe Activity dans activity_card.dart), à l'image et à la ville où elle se déroule (et à l'id) 
+  grâce à l'import d'activity_model.dart (classe Activity) 
 */
 
 import 'package:flutter/material.dart';

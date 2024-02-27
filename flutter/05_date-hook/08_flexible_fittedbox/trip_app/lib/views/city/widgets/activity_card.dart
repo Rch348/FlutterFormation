@@ -1,3 +1,8 @@
+/*
+  Ajout des widgets Flexible (child requis) et FittedBox permettant de gérer les comportements d'extension (ici, celui
+  du texte sur l'image).
+*/
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/activity_model.dart';
 
@@ -49,10 +54,14 @@ class ActivityCard extends StatelessWidget {
                   children: [
                     Flexible(
                       child: FittedBox(
-                          child: Text(
-                        activity.name,
-                        style: const TextStyle(fontSize: 20, color: Colors.white),
-                      )),
+                        child: Text(
+                          activity.name,
+                          style: const TextStyle(
+                            fontSize: 20, 
+                            color: Colors.white
+                          ),
+                        )
+                      ),
                     ),
                   ],
                   // children: [
@@ -65,22 +74,22 @@ class ActivityCard extends StatelessWidget {
                   //       child: Text(activity.name, style: TextStyle(fontSize: 20, color: Colors.white),),
                   //     ),
                   //     ),
-                  //   Flexible(
-                  //     flex: 1,
-                  //     fit: FlexFit.tight,
-                  //     child: Container(
-                  //       color: Colors.red,
-                  //       height: 50,
-                  //     ),
-                  //   ),
-                  //   Flexible(
-                  //     flex: 1,
-                  //     fit: FlexFit.tight,
-                  //     child: Container(
-                  //       color: Colors.green,
-                  //       height: 50,
-                  //     ),
-                  //   ),
+                    // Flexible(
+                    //   flex: 1,
+                    //   fit: FlexFit.tight,
+                    //   child: Container(
+                    //     color: Colors.red,
+                    //     height: 50,
+                    //   ),
+                    // ),
+                    // Flexible(
+                    //   flex: 1,
+                    //   fit: FlexFit.tight,
+                    //   child: Container(
+                    //     color: Colors.green,
+                    //     height: 50,
+                    //   ),
+                    // ),
                   // ],
                 )
               ],

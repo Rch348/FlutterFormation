@@ -1,3 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
+/*
+  Widget ListTile : Affichage de tuiles avec leading: CircleAvatar en guise d'image.
+*/
+
+
 import 'package:flutter/material.dart';
 import 'package:my_trip10_listtile_circleavatar/models/activity_model.dart';
 
@@ -23,10 +30,20 @@ class ActivityCard extends StatelessWidget {
     // );
     return Card(
       child: ListTile(
-       leading: CircleAvatar(backgroundImage: AssetImage(activity.image),),
-       title: Text(activity.name),
-       subtitle: Text(activity.city),
-       trailing: Icon(Icons.more_horiz), 
+        leading: CircleAvatar(
+          backgroundImage: AssetImage(
+            activity.image
+          ),
+        ),
+        title: Text(
+          activity.name
+        ),
+        subtitle: Text(
+          activity.city
+        ),
+        trailing: Icon(
+          Icons.more_horiz
+        ), 
       ),
     );
   }

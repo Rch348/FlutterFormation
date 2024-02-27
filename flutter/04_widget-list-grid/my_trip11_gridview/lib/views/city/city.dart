@@ -4,7 +4,7 @@ import 'package:my_trip11_gridview/datas/data.dart' as data;
 import 'package:my_trip11_gridview/views/city/widgets/activity_card.dart';
 
 /*
-  Ce fichier gère la disposition des activités de chaque ville : sous forme de grille...
+  Ce fichier gère la disposition des activités de chaque ville : sous forme de grille (gridView).
 */
 
 class City extends StatefulWidget {
@@ -34,46 +34,39 @@ class _CityState extends State<City> {
         // ),
 
         // child: GridView(
-        //   gridDelegate:
-        //       SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        //   children: widget.activities
-        //       .map((actvity) => ActivityCard(
-        //             activity: actvity,
-        //           ))
-        //       .toList(),
+        //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        //     crossAxisCount: 2
+        //   ),
+        //   children: widget.activities.map((actvity) => ActivityCard(activity: actvity)).toList(),
         // ),
 
+// Le + opti quand beaucoup de donnée car affiche seulement les données visibles lors du scroll.
         // child: GridView.builder(
         //   gridDelegate:
         //       SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         //   itemBuilder: (context, index) => ActivityCard(activity: widget.activities[index]),
         //   itemCount: widget.activities.length,
-
         // ),
 
-        child: GridView.count(
-          crossAxisCount: 2,
-          mainAxisSpacing: 4,
-          crossAxisSpacing: 4,
+// Le + opti pour l'exemple car pas beaucoup de données.
+        // child: GridView.count(
+        //   crossAxisCount: 2,
+        //   mainAxisSpacing: 4,
+        //   crossAxisSpacing: 4,
+        //   children: widget.activities.map((activity) => ActivityCard(activity: activity,)).toList(),
+        // ),
+
+        child: GridView.extent(
+          maxCrossAxisExtent: 400,
+          mainAxisSpacing: 8,
+          crossAxisSpacing: 8,
           children: widget.activities
-              .map((activity) => ActivityCard(
-                    activity: activity,
+              .map((actvity) => ActivityCard(
+                    activity: actvity,
                   ))
               .toList(),
-
-        ),
-
-        // child: GridView.extent(
-        //   maxCrossAxisExtent: 100,
-        //   mainAxisSpacing: 8,
-        //   crossAxisSpacing: 8,
-        //   children: widget.activities
-        //       .map((actvity) => ActivityCard(
-        //             activity: actvity,
-        //           ))
-        //       .toList(),
           
-        // ),
+        ),
       ),
     );
   }

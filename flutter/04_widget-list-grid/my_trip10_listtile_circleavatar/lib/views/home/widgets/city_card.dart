@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class CityCard extends StatelessWidget {
@@ -8,7 +10,15 @@ class CityCard extends StatelessWidget {
   final VoidCallback updateFavorite;
 
   
-  const CityCard({super.key, required this.name, required this.image, required this.favorite, required this.updateFavorite});
+  const CityCard(
+    {
+      super.key, 
+      required this.name, 
+      required this.image, 
+      required this.favorite, 
+      required this.updateFavorite
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +63,10 @@ class CityCard extends StatelessWidget {
                       // Icon(Icons.favorite, size: 40,color: Colors.white,),
                       Text(
                         name,
-                        style: const TextStyle(color: Colors.white, fontSize: 30),
+                        style: const TextStyle(
+                          color: Colors.white, 
+                          fontSize: 30
+                        ),
                       )
                     ],
                   ),

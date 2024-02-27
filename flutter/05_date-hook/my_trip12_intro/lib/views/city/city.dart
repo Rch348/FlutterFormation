@@ -1,3 +1,7 @@
+/*
+  Ajout d'une row (l46) avec un texte 'Choisissez une date' et d'un bouton 'Sélectionnez une date'.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:my_trip12_intro/models/activity_model.dart';
 import 'package:my_trip12_intro/datas/data.dart' as data;
@@ -17,9 +21,17 @@ class _CityState extends State<City> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
-        title: const Text('Paris'),
-        actions: const [Icon(Icons.more_vert)],
+        leading: const Icon(
+          Icons.arrow_back
+        ),
+        title: const Text(
+          'Paris'
+        ),
+        actions: const [
+          Icon(
+            Icons.more_vert
+          )
+        ],
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -33,10 +45,17 @@ class _CityState extends State<City> {
                   children: [
                     Row(
                       children: [
-                        const Expanded(child: Text('Choisissez une date')),
+                        Expanded(
+                          child: Text(
+                            'Choisissez une date'
+                          )
+                        ),
                         ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Sélectionner une date'))
+                          onPressed: () {},
+                          child: const Text(
+                            'Sélectionner une date'
+                          )
+                        )
                       ],
                     )
                   ],
@@ -46,11 +65,7 @@ class _CityState extends State<City> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 4,
                 crossAxisSpacing: 4,
-                children: widget.activities
-                    .map((actvity) => ActivityCard(
-                          activity: actvity,
-                        ))
-                    .toList(),
+                children: widget.activities.map((actvity) => ActivityCard(activity: actvity,)).toList(),
               ),
             ),
           ],

@@ -1,3 +1,7 @@
+/*
+   Déplacement des données des villes dans data.dart.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/city_model.dart';
 import 'package:trip_app/views/city/city_view.dart';
