@@ -24,8 +24,8 @@ class _TripsViewState extends State<TripsView> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Mes voyages'),
-          bottom: TabBar(tabs: [
+          title: const Text('Mes voyages'),
+          bottom: const TabBar(tabs: [
             Tab(
               text: 'A venir',
             ),
@@ -36,8 +36,8 @@ class _TripsViewState extends State<TripsView> {
         ),
         drawer: const TripDrawer(),
         body: TabBarView(children: [
-          TripList(trips: widget.trips.where((trip) => DateTime.now().isBefore(trip.date.add(Duration(days: 1)))).toList()),
-          TripList(trips: widget.trips.where((trip) => DateTime.now().isAfter(trip.date.add(Duration(days: 1)))).toList()),
+          TripList(trips: widget.trips.where((trip) => DateTime.now().isBefore(trip.date.add(const Duration(days: 1)))).toList()),
+          TripList(trips: widget.trips.where((trip) => DateTime.now().isAfter(trip.date.add(const Duration(days: 1)))).toList()),
           
         ],),
       ),

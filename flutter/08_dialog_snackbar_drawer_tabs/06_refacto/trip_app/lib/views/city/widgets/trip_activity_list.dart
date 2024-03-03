@@ -24,16 +24,16 @@ class TripActivityList extends StatelessWidget {
             title: Text(activities[index].name),
             subtitle: Text(activities[index].city),
             trailing: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.delete,
                 color: Colors.purple,
               ),
               onPressed: () {
                 deleteTripActivity(activities[index].id);
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('Activité supprimée'),
+                  content: const Text('Activité supprimée'),
                   backgroundColor: Colors.blue[200],
-                  duration: Duration(seconds: 4),
+                  duration: const Duration(seconds: 4),
                   action: SnackBarAction(label: 'Annuler', textColor: Colors.black, onPressed: () {},)
                 ));
               },

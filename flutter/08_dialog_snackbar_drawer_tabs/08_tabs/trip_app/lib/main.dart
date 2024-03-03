@@ -25,8 +25,8 @@ class _MyTripState extends State<MyTrip> {
 
   List<Trip> trips = [
     Trip(city: 'Londres', activities: [], date: DateTime.now()),
-    Trip(city: 'Paris', activities: [], date: DateTime.now().add(Duration(days: 3))),
-    Trip(city: 'Berlin', activities: [], date: DateTime.now().subtract(Duration(days: 2))),
+    Trip(city: 'Paris', activities: [], date: DateTime.now().add(const Duration(days: 3))),
+    Trip(city: 'Berlin', activities: [], date: DateTime.now().subtract(const Duration(days: 2))),
   ];
   
   void addTrip(Trip trip){
@@ -68,7 +68,7 @@ class _MyTripState extends State<MyTrip> {
         return null;
       },
       onUnknownRoute: (settings) {
-        return MaterialPageRoute(builder: (context) => NotFound());
+        return MaterialPageRoute(builder: (context) => const NotFound());
       },
     );
   }

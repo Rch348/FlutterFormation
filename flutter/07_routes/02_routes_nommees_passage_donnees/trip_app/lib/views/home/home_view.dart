@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
         items: [
           BottomNavigationBarItem(
             icon: IconButton(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -56,7 +56,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-                icon: Icon(Icons.location_city),
+                icon: const Icon(Icons.location_city),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -65,7 +65,7 @@ class _HomeViewState extends State<HomeView> {
                 }),
             label: 'Villes',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(
               Icons.motorcycle
             ),

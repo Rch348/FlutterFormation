@@ -12,7 +12,7 @@ class TripActivities extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Column(children: [
-        TabBar(
+        const TabBar(
           tabs: [
             Tab(
               text: 'En cours',

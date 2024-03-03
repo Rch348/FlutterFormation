@@ -41,7 +41,7 @@ class _CityState extends State<City> {
   void setDate() {
     showDatePicker(
       context: context,
-      initialDate: DateTime.now().add(Duration(days: 1)),
+      initialDate: DateTime.now().add(const Duration(days: 1)),
       firstDate: DateTime.now(),
       lastDate: DateTime(2025),
     ).then((newDate) {
@@ -72,17 +72,17 @@ class _CityState extends State<City> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),
-        title: Text(
+        title: const Text(
           'Organisation voyage'
           ),
-        actions: [
+        actions: const [
           Icon(
             Icons.more_vert
           )
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -91,11 +91,11 @@ class _CityState extends State<City> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Home()
+                    builder: (context) => const Home()
                   ),
                 );
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back
               )
             ),
@@ -112,14 +112,14 @@ class _CityState extends State<City> {
                       selectedActivities: mytrip.activities,
                       toggleActivity: toggleActivity,
                     )
-                  : TripActivityList(),
+                  : const TripActivityList(),
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
             label: 'Découverte',

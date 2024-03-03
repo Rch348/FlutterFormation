@@ -8,7 +8,7 @@ class HomeView extends StatefulWidget {
   static const String routeName = '/';
   final List<City> cities;
 
-  HomeView({super.key, required this.cities});
+  const HomeView({super.key, required this.cities});
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -25,7 +25,7 @@ class _HomeViewState extends State<HomeView> {
           Icon(Icons.more_vert),
         ],
       ),
-      drawer: TripDrawer(),
+      drawer: const TripDrawer(),
       body: Container(
           padding: const EdgeInsets.all(10),
           color: Colors.grey[100],

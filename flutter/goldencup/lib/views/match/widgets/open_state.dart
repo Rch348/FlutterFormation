@@ -8,7 +8,7 @@ class Open_State extends StatelessWidget
 {
     final bool isOpen;
 
-    Open_State({
+    const Open_State({
         super.key,
         this.isOpen = true,
     });

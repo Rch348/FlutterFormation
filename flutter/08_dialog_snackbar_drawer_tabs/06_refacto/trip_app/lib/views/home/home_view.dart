@@ -9,7 +9,7 @@ class HomeView extends StatefulWidget
   static const String routeName = '/';
   final List<City> cities;
 
-  HomeView
+  const HomeView
   (
     {
       super.key, required this.cities
@@ -42,7 +42,7 @@ class _HomeViewState extends State<HomeView>
           ),
         ],
       ),
-      drawer: TripDrawer(),
+      drawer: const TripDrawer(),
       body: Container
       (
         padding: const EdgeInsets.all(10),

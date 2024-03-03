@@ -11,7 +11,7 @@ class HomeView extends StatefulWidget {
   // final List<City> cities;
 
   // HomeView({super.key, required this.cities});
-  HomeView({super.key});
+  const HomeView({super.key});
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -32,7 +32,7 @@ class _HomeViewState extends State<HomeView> {
           Icon(Icons.more_vert),
         ],
       ),
-      drawer: TripDrawer(),
+      drawer: const TripDrawer(),
       body: Container(
           padding: const EdgeInsets.all(10),
           color: Colors.grey[100],

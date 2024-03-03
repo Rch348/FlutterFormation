@@ -18,7 +18,7 @@ class OneTripView extends StatefulWidget {
 class _OneTripViewState extends State<OneTripView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Text('One Trip view'),
     );
   }

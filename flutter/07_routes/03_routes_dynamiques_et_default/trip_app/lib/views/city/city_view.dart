@@ -60,7 +60,7 @@ class _CityViewState extends State<CityView> {
   void setDate() {
     showDatePicker(
       context: context,
-      initialDate: DateTime.now().add(Duration(days: 1)),
+      initialDate: DateTime.now().add(const Duration(days: 1)),
       firstDate: DateTime.now(),
       lastDate: DateTime(2025),
     ).then((newDate) {
@@ -100,11 +100,11 @@ class _CityViewState extends State<CityView> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),
-        title: Text('Organisation voyage'),
-        actions: [Icon(Icons.more_vert)],
+        title: const Text('Organisation voyage'),
+        actions: const [Icon(Icons.more_vert)],
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: widget.showContext(
           context: context,
           children: [
@@ -129,7 +129,7 @@ class _CityViewState extends State<CityView> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
             label: 'Découverte',

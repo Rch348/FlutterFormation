@@ -41,7 +41,7 @@ class MyTrip extends StatelessWidget {
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
-          builder: (context) => NotFound()
+          builder: (context) => const NotFound()
         );
       },
     );

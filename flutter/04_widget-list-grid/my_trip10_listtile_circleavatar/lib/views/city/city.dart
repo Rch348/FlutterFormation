@@ -25,7 +25,7 @@ class _CityState extends State<City> {
         title: Text(
           'Paris'
         ),
-        actions: [
+        actions: const [
           Icon(
             Icons.more_vert
           )

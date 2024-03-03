@@ -12,7 +12,7 @@ class TripActivities extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Column(children: [
-        TabBar(
+        const TabBar(
           tabs: [
             Tab(
               text: 'En cours',
@@ -26,7 +26,7 @@ class TripActivities extends StatelessWidget {
           height: 600,
           child: TabBarView(
             // empeche le scroll horizontal vers la tab suivante
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               TripActivitiesList(activities: activities),
               TripActivitiesList(activities: activities),

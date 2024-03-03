@@ -25,7 +25,7 @@ class TripActivityList extends StatelessWidget {
             // title: Text(activity.name),
             title: Text(activities[index].name),
             subtitle: Text(activities[index].city),
-            trailing: IconButton(icon: Icon(Icons.delete, color: Colors.purple,), onPressed: () {},),
+            trailing: IconButton(icon: const Icon(Icons.delete, color: Colors.purple,), onPressed: () {},),
           ),
         );
       },

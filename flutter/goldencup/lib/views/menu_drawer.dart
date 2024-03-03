@@ -20,7 +20,7 @@ class _MenuDrawerState extends State<MenuDrawer>
         (
             width: 390,
             height: 700,  
-            decoration: BoxDecoration
+            decoration: const BoxDecoration
             (
                 color: Colors.white,
                 borderRadius: BorderRadius.only
@@ -31,12 +31,12 @@ class _MenuDrawerState extends State<MenuDrawer>
             ),
             child: ListView
             (
-                padding: EdgeInsets.all(10), 
+                padding: const EdgeInsets.all(10), 
                 children: 
                 [
                     Card
                     (
-                        color: Color.fromRGBO(255, 255, 255, 1),
+                        color: const Color.fromRGBO(255, 255, 255, 1),
                         child: Padding
                         (
                             padding: const EdgeInsets.all(20.0),
@@ -50,7 +50,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children:
                                         [
-                                            Text
+                                            const Text
                                             (
                                                 'Récompense',
                                                 style: TextStyle
@@ -59,7 +59,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                                                     fontWeight: FontWeight.w700
                                                 ),
                                             ),
-                                            Text
+                                            const Text
                                             (
                                                 'Tombola',
                                                 style: TextStyle
@@ -68,7 +68,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                                                     fontSize: 20,
                                                 ),
                                             ),
-                                            SizedBox
+                                            const SizedBox
                                             (
                                                 height: 20,
                                             ),
@@ -79,7 +79,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                                             ),
                                         ],
                                     ),
-                                    SizedBox(width: 70),
+                                    const SizedBox(width: 70),
                                     Expanded
                                     (
                                         child: Column
@@ -93,15 +93,15 @@ class _MenuDrawerState extends State<MenuDrawer>
                                                     "assets/images/logo.png",
                                                     width: 100,
                                                 ),
-                                                SizedBox
+                                                const SizedBox
                                                 (
                                                     height: 20,
                                                 ),
                                                 FloatingActionButton
                                                 (
                                                     onPressed: () {}, 
-                                                    backgroundColor: Color.fromRGBO(250, 215, 63, 1),                           
-                                                    child: Text
+                                                    backgroundColor: const Color.fromRGBO(250, 215, 63, 1),                           
+                                                    child: const Text
                                                     (
                                                         'Récupérer',
                                                         style: TextStyle
@@ -121,7 +121,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                     ),               
                     Card
                     (    
-                        color: Color.fromRGBO(255, 255, 255, 1),           
+                        color: const Color.fromRGBO(255, 255, 255, 1),           
                         child: Padding
                         (
                             padding: const EdgeInsets.all(20.0),
@@ -130,7 +130,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: 
                                 [
-                                    Column
+                                    const Column
                                     (
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children: 
@@ -168,7 +168,7 @@ class _MenuDrawerState extends State<MenuDrawer>
                                             ),
                                         ],
                                     ),
-                                    SizedBox(width: 70),
+                                    const SizedBox(width: 70),
                             
                                     Expanded
                                     (
@@ -183,15 +183,15 @@ class _MenuDrawerState extends State<MenuDrawer>
                                                     "assets/images/gc.png",
                                                     width: 80,
                                                 ),
-                                                SizedBox
+                                                const SizedBox
                                                 (
                                                     height: 20,
                                                 ),
                                                 FloatingActionButton
                                                 (
                                                     onPressed: () {}, 
-                                                    backgroundColor: Color.fromRGBO(250, 215, 63, 1),                                                                            
-                                                    child: Text
+                                                    backgroundColor: const Color.fromRGBO(250, 215, 63, 1),                                                                            
+                                                    child: const Text
                                                     (
                                                         'Récupérer',
                                                         style: TextStyle

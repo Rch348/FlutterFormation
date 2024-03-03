@@ -14,12 +14,12 @@ class _TripsViewState extends State<TripsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mes voyages'),
+        title: const Text('Mes voyages'),
       ),
-      drawer: TripDrawer(),
+      drawer: const TripDrawer(),
       body: Container(
         alignment: Alignment.center,
-        child: Text('TripsView'),),
+        child: const Text('TripsView'),),
     );
   }
 }

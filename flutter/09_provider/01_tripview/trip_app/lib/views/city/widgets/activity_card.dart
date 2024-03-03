@@ -14,7 +14,7 @@ class ActivityCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 150,
       child: Stack(
         fit: StackFit.expand,
@@ -27,7 +27,7 @@ class ActivityCard extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Column(
               children: [
                 Expanded(
@@ -36,7 +36,7 @@ class ActivityCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       if (isSelected)
-                        Icon(
+                        const Icon(
                           Icons.check,
                           size: 40,
                           color: Colors.white,
@@ -51,7 +51,7 @@ class ActivityCard extends StatelessWidget {
                       child: FittedBox(
                           child: Text(
                         activity.name,
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: const TextStyle(fontSize: 20, color: Colors.white),
                       )),
                     ),
                   ],

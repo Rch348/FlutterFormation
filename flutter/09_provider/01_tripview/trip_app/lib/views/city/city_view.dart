@@ -19,7 +19,7 @@ class CityView extends StatefulWidget {
     return city.activities;
   }
 
-  CityView({super.key, required this.city, required this.addTrip});
+  const CityView({super.key, required this.city, required this.addTrip});
 
   // fonction qui décide de la structure d'affichage en fonction de l'orientation du téléphone
   showContext({required BuildContext context, required List<Widget> children}) {
@@ -88,7 +88,7 @@ class _CityViewState extends State<CityView> {
   void setDate() {
     showDatePicker(
       context: context,
-      initialDate: DateTime.now().add(Duration(days: 1)),
+      initialDate: DateTime.now().add(const Duration(days: 1)),
       firstDate: DateTime.now(),
       lastDate: DateTime(2025),
     ).then((newDate) {
@@ -125,8 +125,8 @@ class _CityViewState extends State<CityView> {
         context: context,
         builder: (context) {
           return SimpleDialog(
-            title: Text('Voulez-vous sauvegarder votre voyage ?'),
-            contentPadding: EdgeInsets.all(10),
+            title: const Text('Voulez-vous sauvegarder votre voyage ?'),
+            contentPadding: const EdgeInsets.all(10),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             children: [
@@ -136,14 +136,14 @@ class _CityViewState extends State<CityView> {
 
                   TextButton(
                     onPressed: () {},
-                    child: Text('Annuler'),
+                    child: const Text('Annuler'),
                   ),
 
-                  SizedBox(width: 24,),
+                  const SizedBox(width: 24,),
 
                   FilledButton(
                     onPressed: () {Navigator.pop(context, 'save');},
-                    child: Text('Sauvegarder'),
+                    child: const Text('Sauvegarder'),
                   ),
                 ],
               )
@@ -154,6 +154,7 @@ class _CityViewState extends State<CityView> {
           Navigator.pushNamed(context, HomeView.routeName);
         });
   }
+  
   @override
   Widget build(BuildContext context) {
     // final City city = ModalRoute.of(context)!.settings.arguments as City;
@@ -161,12 +162,12 @@ class _CityViewState extends State<CityView> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),
-        title: Text('Organisation voyage'),
-        actions: [Icon(Icons.more_vert)],
+        title: const Text('Organisation voyage'),
+        actions: const [Icon(Icons.more_vert)],
       ),
-      drawer: TripDrawer(),
+      drawer: const TripDrawer(),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: widget.showContext(
           context: context,
           children: [
@@ -192,11 +193,11 @@ class _CityViewState extends State<CityView> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: saveTrip,
-        child: Icon(Icons.save),
+        child: const Icon(Icons.save),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
             label: 'Découverte',

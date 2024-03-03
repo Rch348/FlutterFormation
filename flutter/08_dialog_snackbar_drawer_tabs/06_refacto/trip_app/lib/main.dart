@@ -64,14 +64,14 @@ class _MyTripState extends State<MyTrip> {
           }
           case TripsView.routeName:
           {
-            return MaterialPageRoute(builder: (context) => TripsView());
+            return MaterialPageRoute(builder: (context) => const TripsView());
           }
         }
         return null;
       },
       onUnknownRoute: (settings) 
       {
-        return MaterialPageRoute(builder: (context) => NotFound());
+        return MaterialPageRoute(builder: (context) => const NotFound());
       },
     );
   }

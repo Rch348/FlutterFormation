@@ -12,7 +12,7 @@ class CityCard extends StatelessWidget {
     return Card(
       surfaceTintColor: const Color.fromRGBO(255, 255, 255, 1),
       elevation: 2,
-      child: Container(
+      child: SizedBox(
         height: 150,
         child: Stack(
           fit: StackFit.expand,
@@ -40,11 +40,11 @@ class CityCard extends StatelessWidget {
               top: 10,
               left: 10,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 color: Colors.black54,
                 child: Text(
                   city.name,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 32,
                     color: Colors.white,
                   ),

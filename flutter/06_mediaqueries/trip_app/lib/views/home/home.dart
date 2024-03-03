@@ -76,18 +76,18 @@ class _HomeState extends State<Home> {
         items: [
           BottomNavigationBarItem(
             icon: IconButton(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => const Home()),
                   );
                 }),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 onPressed: () {
                   // Navigator.pop(
                   //   context,
@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
                 }),
             label: 'Villes',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.motorcycle),
             label: 'MoveTo',
           ),

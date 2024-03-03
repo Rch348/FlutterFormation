@@ -21,7 +21,7 @@ class TripCityBar extends StatelessWidget {
           Container(
             // pour assombrir l'image pour mieux voir le texte
             color: Colors.black26,
-            padding: EdgeInsets.symmetric(vertical: 48, horizontal: 16),
+            padding: const EdgeInsets.symmetric(vertical: 48, horizontal: 16),
             child: Column(children: [
               Row(
                 children: [
@@ -29,7 +29,7 @@ class TripCityBar extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back, size: 30, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back, size: 30, color: Colors.white),
                   ),
                 ],
               ),
@@ -37,7 +37,7 @@ class TripCityBar extends StatelessWidget {
                   child: Center(
                 child: Text(
                   city.name,
-                  style: TextStyle(fontSize: 30, color: Colors.white),
+                  style: const TextStyle(fontSize: 30, color: Colors.white),
                 ),
               ))
             ]),

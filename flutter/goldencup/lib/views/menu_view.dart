@@ -18,9 +18,9 @@ class Menu_View extends StatefulWidget
 
     Widget selectionView(int index)
     {
-        if (index == 0)
-            return const Home_View();
-        else if (index == 1)
+        if (index == 0) {
+          return const Home_View();
+        } else if (index == 1)
             return const Match_View();
         else if (index == 2)
             return const Ligue_View();

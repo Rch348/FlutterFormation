@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:my_trip06/home.dart';
 
 void main() {
-  runApp(MyTrip());
+  runApp(const MyTrip());
 }
 
 class MyTrip extends StatelessWidget {
+  const MyTrip({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
     );

@@ -45,7 +45,7 @@ class _CityState extends State<City> {
                   children: [
                     Row(
                       children: [
-                        Expanded(
+                        const Expanded(
                           child: Text(
                             'Choisissez une date'
                           )

@@ -19,19 +19,19 @@ class TripOverview extends StatelessWidget {
     var size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       height: 200,
       width: orientation == Orientation.landscape ? size.width * 0.5 : size.width,
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Paris',
             style:
                 TextStyle(fontSize: 24, decoration: TextDecoration.underline),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -39,29 +39,29 @@ class TripOverview extends StatelessWidget {
               Expanded(
                 child: Text(
                   DateFormat('d/M/y').format(trip.date),
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
               ),
               ElevatedButton(
-                  onPressed: setDate, child: Text(
+                  onPressed: setDate, child: const Text(
                     'Sélectionner une date'
                   )
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
             children: [
-              Expanded(
+              const Expanded(
                   child: Text(
                 'Montant/personne',
                 style: TextStyle(fontSize: 20),
               )),
               Text(
                 '$amount €',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               )
             ],
           )

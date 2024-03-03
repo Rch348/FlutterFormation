@@ -14,12 +14,12 @@ import 'package:trip_app/views/not_found/not_found.dart';
 // import 'package:trip_app/datas/data.dart' as data;
 
 void main() {
-  runApp(MyTrip());
+  runApp(const MyTrip());
 }
 
 class MyTrip extends StatefulWidget {
   // final List<City> cities = data.cities;
-  MyTrip({super.key});
+  const MyTrip({super.key});
 
   @override
   State<MyTrip> createState() => _MyTripState();
@@ -58,7 +58,7 @@ class _MyTripState extends State<MyTrip> {
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
-          HomeView.routeName: (context) => HomeView(),
+          HomeView.routeName: (context) => const HomeView(),
         },
         // onGenerateRoute: (settings) {
         //   switch (settings.name) {
@@ -94,7 +94,7 @@ class _MyTripState extends State<MyTrip> {
         //   }
         // },
         onUnknownRoute: (settings) {
-          return MaterialPageRoute(builder: (context) => NotFound());
+          return MaterialPageRoute(builder: (context) => const NotFound());
         },
       ),
     );

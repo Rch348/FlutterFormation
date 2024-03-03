@@ -18,7 +18,7 @@ class _TripsViewState extends State<TripsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mes voyages'),
+        title: const Text('Mes voyages'),
       ),
       drawer: const TripDrawer(),
       body: Container(

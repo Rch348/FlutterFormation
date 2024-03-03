@@ -12,17 +12,17 @@ class TripActivitiesList extends StatelessWidget {
       itemBuilder: (context, index) {
         final Activity activity = activities[index];
         return Container(
-          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Dismissible(
             direction: DismissDirection.endToStart,
             background: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
                 color: Colors.greenAccent,
                 borderRadius: BorderRadius.circular(10),
               ),
               alignment: Alignment.centerRight,
-              child: Icon(Icons.check, color: Colors.white,),
+              child: const Icon(Icons.check, color: Colors.white,),
             ),
             // il a besoin d'une clé unique pour l'associé a l'élément ici pour on a l'id de l'activité
             key: ValueKey(activity.id),
