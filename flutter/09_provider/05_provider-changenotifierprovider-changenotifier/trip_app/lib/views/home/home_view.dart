@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trip_app/models/city_model.dart';
 import 'package:trip_app/providers/city_providers.dart';
 import 'package:trip_app/shared_widgets/tripdrawer.dart';
-import 'package:trip_app/views/city/city_view.dart';
+// import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/widgets/city_card.dart';
 import 'package:provider/provider.dart';
 

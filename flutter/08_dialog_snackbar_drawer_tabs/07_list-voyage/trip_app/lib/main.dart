@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:trip_app/models/city_model.dart';
 import 'package:trip_app/models/trip_model.dart';
-import 'package:trip_app/routes.dart';
+// import 'package:trip_app/routes.dart';
 import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/home_view.dart';
 import 'package:trip_app/views/not_found/not_found.dart';
@@ -61,6 +61,7 @@ class _MyTripState extends State<MyTrip> {
               return MaterialPageRoute(builder: (context) => TripsView(trips: trips));
             }
         }
+        return null;
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (context) => NotFound());

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/rendering.dart';
+// import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:trip_app/models/city_model.dart';
-import 'package:trip_app/models/trip_model.dart';
+// import 'package:trip_app/models/city_model.dart';
+// import 'package:trip_app/models/trip_model.dart';
 import 'package:trip_app/providers/city_providers.dart';
-import 'package:trip_app/routes.dart';
-import 'package:trip_app/views/city/city_view.dart';
+// import 'package:trip_app/routes.dart';
+// import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/home_view.dart';
 import 'package:trip_app/views/not_found/not_found.dart';
-import 'package:trip_app/views/one_trip/one_trip_view.dart';
-import 'package:trip_app/views/trips/trips_view.dart';
-import 'package:trip_app/datas/data.dart' as data;
+// import 'package:trip_app/views/one_trip/one_trip_view.dart';
+// import 'package:trip_app/views/trips/trips_view.dart';
+// import 'package:trip_app/datas/data.dart' as data;
 
 void main() {
   runApp(MyTrip());
