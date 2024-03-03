@@ -1,5 +1,10 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+/*
+  Rajout d'un booléen (favorite) et d'une fonction de rappel (updateFavorite) dans la classe CityCard pour mettre à jour l'état 
+  (favori ou non) de la ville après clic sur la carte.
+*/
+
 import 'package:flutter/material.dart';
 
 class CityCard extends StatelessWidget {
@@ -24,9 +29,11 @@ class CityCard extends StatelessWidget {
         elevation: 2,
         child: Container(
           height: 150,
+          // Stack pour ajouter le container (L44).
           child: Stack(
             fit: StackFit.expand, 
             children: [
+              // Premier widget Ink.image requis pour visualiser l'effet car si directement child: Inkwell, l'effet sera en dessous de l'image. 
               Ink.image(
                 fit: BoxFit.fitWidth,
                 image: AssetImage(image),

@@ -1,6 +1,11 @@
+/*
+  Refactorisation : transfert de la vue des dates, showDatePicker et montant de city.dart dans ce fichier :
+  trip_overview.dart.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:my_trip15_orga_voyage/models/trip_model.dart';
+import 'package:my_trip15_orga_voyage/models/trip_model.dart'; 
 
 class TripOverview extends StatelessWidget {
   final VoidCallback setDate;
@@ -10,7 +15,13 @@ class TripOverview extends StatelessWidget {
     return 0;
   }
 
-  const TripOverview({super.key, required this.setDate, required this.trip});
+  const TripOverview(
+    {
+      super.key, 
+      required this.setDate, 
+      required this.trip
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +33,10 @@ class TripOverview extends StatelessWidget {
         children: [
           const Text(
             'Paris',
-            style:
-                TextStyle(fontSize: 24, decoration: TextDecoration.underline),
+            style: TextStyle(
+              fontSize: 24, 
+              decoration: TextDecoration.underline
+            ),
           ),
           const SizedBox(
             height: 30,
@@ -33,11 +46,17 @@ class TripOverview extends StatelessWidget {
               Expanded(
                 child: Text(
                   DateFormat('d/M/y').format(trip.date),
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(
+                    fontSize: 20
+                  ),
                 ),
               ),
               ElevatedButton(
-                  onPressed: setDate, child: const Text('Sélectionner une date'))
+                onPressed: setDate, 
+                child: const Text(
+                  'Sélectionner une date'
+                )
+              )
             ],
           ),
           const SizedBox(
@@ -46,13 +65,19 @@ class TripOverview extends StatelessWidget {
           Row(
             children: [
               const Expanded(
-                  child: Text(
-                'Montant/personne',
-                style: TextStyle(fontSize: 20),
-              )),
+                child: Text(
+                  'Montant/personne',
+                  style: TextStyle(
+                    fontSize: 20
+                  ),
+                )
+              ),
               Text(
                 '$amount €',
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 20, 
+                  fontWeight: FontWeight.bold
+                ),
               )
             ],
           )

@@ -17,7 +17,11 @@ class City extends StatefulWidget {
 }
 
 class _CityState extends State<City> {
-  Trip mytrip = Trip(city: 'Paris', activities: [], date: DateTime.now());
+  Trip mytrip = Trip(
+    city: 'Paris', 
+    activities: [], 
+    date: DateTime.now()
+  );
 
   void setDate() {
     showDatePicker(
@@ -40,9 +44,17 @@ class _CityState extends State<City> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
-        title: const Text('Organiisation voyage'),
-        actions: const [Icon(Icons.more_vert)],
+        leading: const Icon(
+          Icons.arrow_back
+        ),
+        title: const Text(
+          'Organiisation voyage'
+        ),
+        actions: const [
+          Icon(
+            Icons.more_vert
+          )
+        ],
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -102,11 +114,7 @@ class _CityState extends State<City> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 4,
                 crossAxisSpacing: 4,
-                children: widget.activities
-                    .map((actvity) => ActivityCard(
-                          activity: actvity,
-                        ))
-                    .toList(),
+                children: widget.activities.map((activity) => ActivityCard(activity: activity,)).toList(),
               ),
             ),
           ],

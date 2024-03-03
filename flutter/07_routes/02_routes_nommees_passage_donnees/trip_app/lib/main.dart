@@ -1,3 +1,9 @@
+/*
+  Ajout des routes nommées : Définition des noms des routes ici (main.dart):
+  - Pour se rendre sur HomeView : '/'
+  - Pour se rendre sur HomeView : '/city'
+*/
+
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 import 'package:trip_app/views/city/city_view.dart';
@@ -16,13 +22,18 @@ class MyTrip extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: HomeView(),
       // home: City(),
-      initialRoute: '/',
-      routes: {
 
+      // Route nommée définissant le point de départ de l'application.
+      initialRoute: '/',
+      
+      // Définition des noms des routes :
+      routes: {
+        // 1ère route : HomeView().
         '/' : (context) {
           return HomeView();
         },
 
+        // 2ème route : CityView().
         '/city' : (context) {
           return CityView();
         },

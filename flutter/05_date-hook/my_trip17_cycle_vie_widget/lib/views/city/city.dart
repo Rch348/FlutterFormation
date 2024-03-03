@@ -1,3 +1,11 @@
+/*
+  Pour visionner les étapes de construction des widgets lors du lancement de l'application :
+  - 1 : Class City (L21) vérifié par le print 'create state'
+  - 2 : _CityState (L38) vérifié par le print 'Construct _CityState'
+  - 3 : super.initState (L45) vérifié par le print 'Init State _CitySate'
+  - 4 : Widget.build(BuildContext context) (L76) vérifié par le print 'Build city'
+*/
+
 import 'package:flutter/material.dart';
 // import 'package:my_trip17_cycle_vie_widget/views/city/widgets/activity_card.dart';
 // import 'package:intl/intl.dart';
@@ -70,7 +78,7 @@ class _CityState extends State<City> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),  
-        title: const Text('Organiisation voyage'),
+        title: const Text('Organisation voyage'),
         actions: const [Icon(Icons.more_vert)],
       ),
       body: Container(

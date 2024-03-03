@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:flutter/material.dart';
 import 'package:trip_app/datas/data.dart' as data;
 import 'package:trip_app/models/activity_model.dart';
 import 'package:trip_app/models/city_model.dart';
@@ -63,14 +64,12 @@ class _CityViewState extends State<CityView> {
 
     double total = 0.00;
 
-    // On parcours chaque identifiant des activités selectionnées stockés dans mytrip.activities
     for (var activityId in mytrip.activities) {
-      // On parcours chaque activité dans widget.activities afin de trouver une correspondance
+
       for (var activity in widget.activities) {
-        // On recherche manuellement l'activité correspondante(a activityId) dans widget.activities dans le but de recuperer le prix et l'additionner au total
+
         if (activityId == activity.id) {
           total += activity.price;
-          // on arrete la recherche dès que l'on a trouvé la correspondance
           break;
         }
       }

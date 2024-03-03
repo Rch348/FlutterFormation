@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/activity_model.dart';
 
@@ -7,10 +9,13 @@ class ActivityCard extends StatelessWidget {
   final VoidCallback toggleActivity;
 
   const ActivityCard(
-      {super.key,
+    {
+      super.key,
       required this.activity,
       required this.isSelected,
-      required this.toggleActivity});
+      required this.toggleActivity
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,9 @@ class ActivityCard extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Ink.image(
-            image: AssetImage(activity.image),
+            image: AssetImage(
+              activity.image
+            ),
             fit: BoxFit.cover,
             child: InkWell(
               onTap: toggleActivity,
@@ -51,11 +58,13 @@ class ActivityCard extends StatelessWidget {
                       child: FittedBox(
                           child: Text(
                         activity.name,
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 20, 
+                          color: Colors.white
+                        ),
                       )),
                     ),
-                  ],
-                  
+                  ],                 
                 )
               ],
             ),

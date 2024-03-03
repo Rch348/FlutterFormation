@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/views/home/home_view.dart';
 import 'package:trip_app/views/trips/trips_view.dart';
@@ -8,7 +10,7 @@ class TripDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-          child: ListView(
+      child: ListView(
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
@@ -23,21 +25,38 @@ class TripDrawer extends StatelessWidget {
             ),
             child: Text(
               'Trip',
-              style: TextStyle(color: Colors.white, fontSize: 30),
+              style: TextStyle(
+                color: Colors.white, 
+                fontSize: 30
+              ),
             ),
           ), 
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Accueil'),
+            leading: Icon(
+              Icons.home
+            ),
+            title: Text(
+              'Accueil'
+            ),
             onTap: () {
-              Navigator.pushNamed(context, HomeView.routeName);
+              Navigator.pushNamed(
+                context, 
+                HomeView.routeName
+              );
             },
           ),
           ListTile(
-            leading: Icon(Icons.flight),
-            title: Text('Mes voyages'),
+            leading: Icon(
+              Icons.flight
+            ),
+            title: Text(
+              'Mes voyages'
+            ),
             onTap: () {
-              Navigator.pushNamed(context, TripsView.routeName);
+              Navigator.pushNamed(
+                context, 
+                TripsView.routeName
+              );
             },
           ),
         ],

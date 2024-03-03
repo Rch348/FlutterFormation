@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:my_trip06/city_card.dart';
 
+// Ici sera ajouté tout ce qui restera statique (ce qui ne changera pas).
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -8,6 +11,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+// Ici sera ajouté tout ce qui restera dynamique (ce qui va changer).
 class _HomeState extends State<Home> {
 
   List cities = [
@@ -47,8 +51,6 @@ class _HomeState extends State<Home> {
                     switchFavorite(city);
                   }),
                 
-                // CityCard(name: 'Londres', image: 'assets/images/londres.jpeg',),
-                // CityCard(),
               ],
             )),
           bottomNavigationBar: BottomNavigationBar(

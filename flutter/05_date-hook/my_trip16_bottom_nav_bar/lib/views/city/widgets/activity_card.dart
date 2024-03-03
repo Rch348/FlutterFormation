@@ -10,12 +10,16 @@ class ActivityCard extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Container(
+      // Largeur max.
       width: double.infinity,
       margin: const EdgeInsets.all(5),
       child: Column(
         children: [
           // Text(activity.name),
-          Image.asset(activity.image, fit: BoxFit.cover,),
+          Image.asset(
+            activity.image, 
+            fit: BoxFit.cover,
+          ),
         ],
       ),
     );

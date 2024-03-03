@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/city_model.dart';
 import 'package:trip_app/views/city/city_view.dart';

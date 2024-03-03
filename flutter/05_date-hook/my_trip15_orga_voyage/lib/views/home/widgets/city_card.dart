@@ -50,10 +50,13 @@ class CityCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
 
                     children: [
-                      // Icon(Icons.favorite, size: 40,color: Colors.white,),
+                      // Icon(Icons.favorite, size: 40, color: Colors.white,),
                       Text(
                         name,
-                        style: const TextStyle(color: Colors.white, fontSize: 30),
+                        style: const TextStyle(
+                          color: Colors.white, 
+                          fontSize: 30
+                        ),
                       )
                     ],
                   ),

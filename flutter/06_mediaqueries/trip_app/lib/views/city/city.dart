@@ -1,5 +1,9 @@
-import 'package:flutter/material.dart';
+/*
+  Ajout de mediaquerie changeant la mise en forme en fonction de l'orientation du téléphone.
+  Ajout de la fonction deleteTripActivity pour supprimer les activités sélectionnées grâce à l'icône poubelle.
+*/
 
+import 'package:flutter/material.dart';
 import 'package:trip_app/datas/data.dart' as data;
 import 'package:trip_app/models/activity_model.dart';
 import 'package:trip_app/models/trip_model.dart';
@@ -13,7 +17,8 @@ class City extends StatefulWidget {
 
   final List<Activity> activities = data.activities;
 
-  // fonction qui décide de la structure d'affichage en fonction de l'orientation du téléphone 
+  // fonction qui décide de la structure d'affichage (ici, une liste de children) en fonction 
+  //de l'orientation du téléphone :
   showContext({ required BuildContext context, required List<Widget> children }){
 
     // on récupere l'orientation du téléphone
@@ -24,7 +29,7 @@ class City extends StatefulWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: children,
         );
-    }else {
+    } else {
       return Column(children: children,);
     }
   }
@@ -38,9 +43,10 @@ class _CityState extends State<City> {
   late int index;
 
   @override
+  // Fonction pour dire de faire référence au parent de la classe initState
   void initState() {
     super.initState();
-
+    
     mytrip = Trip(city: 'Paris', activities: [], date: DateTime.now());
     index = 0;
   }

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:my_trip06_refacto/city_card.dart';
+import 'package:my_trip06_refacto/views/home/widgets/city_card.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,11 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List cities = [
-    {
-      'name': 'Montpellier',
-      'image': 'assets/images/Montpellier.jpeg',
-      'favorite': false
-    },
+    {'name': 'Montpellier','image': 'assets/images/Montpellier.jpeg','favorite': false},
     {'name': 'Peyrou', 'image': 'assets/images/Peyrou.jpeg', 'favorite': false},
     {'name': 'Travers', 'image': 'assets/images/Travers.png', 'favorite': false}
   ];

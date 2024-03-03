@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/activity_model.dart';
 
@@ -21,8 +23,12 @@ class TripActivityList extends StatelessWidget {
               backgroundImage: AssetImage(activities[index].image),
             ),
             // title: Text(activity.name),
-            title: Text(activities[index].name),
-            subtitle: Text(activities[index].city),
+            title: Text(
+              activities[index].name
+            ),
+            subtitle: Text(
+              activities[index].city
+            ),
             trailing: IconButton(
               icon: Icon(
                 Icons.delete,

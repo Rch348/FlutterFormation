@@ -59,15 +59,13 @@ class _HomeState extends State<Home> {
               children: [
                 for (var city in cities)
                   CityCard(
-                      name: city['name'],
-                      image: city['image'],
-                      favorite: city['favorite'],
-                      updateFavorite: () {
-                        switchFavorite(city);
-                      }),
-            
-                // CityCard(name: 'Londres', image: 'assets/images/londres.jpeg',),
-                // CityCard(),
+                    name: city['name'],
+                    image: city['image'],
+                    favorite: city['favorite'],
+                    updateFavorite: () {
+                      switchFavorite(city);
+                    }
+                  ),
               ],
             ),
           )),

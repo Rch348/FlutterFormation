@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+// Flexible et FittedBox => activity_card.dart
 
+import 'package:flutter/material.dart';
 import 'package:trip_app/datas/data.dart' as data;
 import 'package:trip_app/models/activity_model.dart';
 import 'package:trip_app/models/trip_model.dart';
@@ -18,6 +19,8 @@ class City extends StatefulWidget {
 }
 
 class _CityState extends State<City> {
+  // Déclaration d'une variable mytrip qui contiendra (lorsqu'elle sera initialisée) une 
+  // nouvelle instance de la classe Trip.
   late Trip mytrip;
   late int index;
 

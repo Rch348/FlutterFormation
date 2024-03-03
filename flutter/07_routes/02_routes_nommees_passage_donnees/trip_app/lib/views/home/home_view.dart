@@ -39,7 +39,8 @@ class _HomeViewState extends State<HomeView> {
                       city : city),
               ],
             ),
-          )),
+          )
+        ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -65,7 +66,9 @@ class _HomeViewState extends State<HomeView> {
             label: 'Villes',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.motorcycle),
+            icon: Icon(
+              Icons.motorcycle
+            ),
             label: 'MoveTo',
           ),
         ],

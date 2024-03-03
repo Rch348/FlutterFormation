@@ -1,3 +1,8 @@
+/*
+  Mise en forme de la vue des différentes activités d'une ville sous forme de grille
+  (affichée en dessous de TripOverview).
+*/
+
 import 'package:flutter/material.dart';
 import 'package:my_trip16_bottom_nav_bar/models/activity_model.dart';
 import 'package:my_trip16_bottom_nav_bar/views/city/widgets/activity_card.dart';

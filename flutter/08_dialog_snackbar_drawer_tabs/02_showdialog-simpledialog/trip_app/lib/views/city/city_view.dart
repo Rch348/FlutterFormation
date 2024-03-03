@@ -1,5 +1,12 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+/*
+  Création d'une sauvegarde de la sélection des activités, renvoyant une boîte de dialogue pour confirmer :
+  - Fonction saveTrip()
+  - Bouton renvoyant une boîte de dialogue pour confirmation sélection
+*/
+
+import 'package:flutter/material.dart';
 import 'package:trip_app/datas/data.dart' as data;
 import 'package:trip_app/models/activity_model.dart';
 import 'package:trip_app/models/city_model.dart';
@@ -14,11 +21,11 @@ class CityView extends StatefulWidget {
   final List<Activity> activities = data.activities;
   final City city;
 
+  // Ne pas mettre 'activities' ou 'routeName' en required car ce sont des variables initialisées
+  // alors que city ne l'est pas.
   CityView({super.key, required this.city});
 
-  // fonction qui décide de la structure d'affichage en fonction de l'orientation du téléphone
   showContext({required BuildContext context, required List<Widget> children}) {
-    // on récupere l'orientation du téléphone
     var orientation = MediaQuery.of(context).orientation;
 
     if (orientation == Orientation.landscape) {
@@ -42,6 +49,7 @@ class _CityViewState extends State<CityView> {
   late int index;
 
   @override
+  // Similaire à un constructeur.
   void initState() {
     super.initState();
 
@@ -63,14 +71,10 @@ class _CityViewState extends State<CityView> {
 
     double total = 0.00;
 
-    // On parcours chaque identifiant des activités selectionnées stockés dans mytrip.activities
     for (var activityId in mytrip.activities) {
-      // On parcours chaque activité dans widget.activities afin de trouver une correspondance
       for (var activity in widget.activities) {
-        // On recherche manuellement l'activité correspondante(a activityId) dans widget.activities dans le but de recuperer le prix et l'additionner au total
         if (activityId == activity.id) {
           total += activity.price;
-          // on arrete la recherche dès que l'on a trouvé la correspondance
           break;
         }
       }
@@ -114,28 +118,32 @@ class _CityViewState extends State<CityView> {
   }
 
   void saveTrip() {
+    // Affiche une boîte de dialogue au dessus du contenu actuel 
     showDialog(
         context: context,
         builder: (context) {
+          // Utilisé avec showDialog pour personnaliser la boîte de dialogue.
           return SimpleDialog(
             title: Text('Voulez-vous sauvegarder votre voyage ?'),
             contentPadding: EdgeInsets.all(10),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context, '/');
+                    },
                     child: Text('Annuler'),
                   ),
-
-                  SizedBox(width: 24,),
-
+                  SizedBox(
+                    width: 24,
+                  ),
                   FilledButton(
-                    onPressed: () {Navigator.pop(context, 'save');},
+                    onPressed: () {
+                      Navigator.pop(context, 'save');
+                    },
                     child: Text('Sauvegarder'),
                   ),
                 ],
@@ -143,12 +151,12 @@ class _CityViewState extends State<CityView> {
             ],
           );
         }).then((result) {
-          // print(result);
-          Navigator.pushNamed(context, HomeView.routeName);
-        });
+      // print(result);
+      Navigator.pushNamed(context, HomeView.routeName);
+    });
   }
 
-  // 2eme façon d'écrire 
+  // 2eme façon d'écrire
   // void saveTrip() async {
   //   final result = await showDialog(
   //       context: context,
@@ -190,8 +198,14 @@ class _CityViewState extends State<CityView> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),
-        title: Text('Organisation voyage'),
-        actions: [Icon(Icons.more_vert)],
+        title: Text(
+          'Organisation voyage'
+        ),
+        actions: [
+          Icon(
+            Icons.more_vert
+          )
+        ],
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -220,17 +234,23 @@ class _CityViewState extends State<CityView> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: saveTrip,
-        child: Icon(Icons.save),
+        child: Icon(
+          Icons.save
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.map),
+            icon: Icon(
+              Icons.map
+            ),
             label: 'Découverte',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.stars),
+            icon: Icon(
+              Icons.stars
+            ),
             label: 'Mes activités',
           ),
         ],

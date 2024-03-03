@@ -1,3 +1,9 @@
+// ignore_for_file: avoid_unnecessary_containers
+
+/*
+  Fichier qui contiendra la liste des activités sélectionnées de la ville.
+*/
+
 import 'package:flutter/material.dart';
 
 class TripActivityList extends StatelessWidget {
@@ -6,7 +12,9 @@ class TripActivityList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Text('Trip activity list'),
+      child: const Text(
+        'Trip activity list'
+      ),
     );
   }
 }
