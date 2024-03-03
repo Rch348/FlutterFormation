@@ -41,12 +41,16 @@ class _Menu_ViewState extends State<Menu_View>
             appBar: AppBar
             (
                 backgroundColor: YELLOW,
+                surfaceTintColor: TRANSPARENT,
+
+                elevation: 8,
+                shadowColor: GREY_LIGHT,
 
                 leadingWidth: 130,
                 leading: Container
                 (
-                    margin: EdgeInsets.all(8),
-                    alignment: Alignment.center,
+                    margin: EdgeInsets.only(left: 16),
+                    alignment: Alignment.centerLeft,
                     child: FittedBox
                     (
                         child: Text
@@ -55,17 +59,88 @@ class _Menu_ViewState extends State<Menu_View>
                             style: TextStyle
                             (
                                 fontSize: 20,
-                                fontWeight: FontWeight.normal,
+                                fontWeight: FontWeight.w500,
                             ),
                         ),
                     ),
                 ),
                 
                 centerTitle: true,
-                title: Text("1230 Pts"),
+                title: Row
+                (
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: 
+                    [
+                        Text
+                        (
+                            "1230",
+                            style: TextStyle
+                            (
+                                fontWeight: FontWeight.w600,
+                            ),
+                        ),
+                        Text
+                        (
+                            "Pts",
+                            style: TextStyle
+                            (
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                height: 1.75
+                            ),
+                        ),
+                    ],
+                ),
+                
+                actions:
+                [
+                    Builder
+                    (
+                        builder: (context) => IconButton
+                        (
+                            icon: Container
+                            (
+                                padding: EdgeInsets.only(right: 16),
+                                child: Stack
+                                (
+                                    alignment: Alignment.topRight,
+                                    children: 
+                                    [
+                                        Image.asset("assets/images/Cadeau.png"),
+                                        Container
+                                        (
+                                            alignment: Alignment.center,
+                                            height: 20,
+                                            width: 20,
+
+                                            decoration: BoxDecoration
+                                            (
+                                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                                color: RED,
+                                            ),
+                                            
+                                            child: Text
+                                            (
+                                                "1",
+                                                style: TextStyle
+                                                (  
+                                                    color: WHITE,
+                                                    fontWeight: FontWeight.w700,
+                                                ),
+                                            ),
+                                        )
+                                    ],
+                                ),
+                            ),
+                            
+                            onPressed: () => Scaffold.of(context).openEndDrawer(),
+                            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                        ),
+                    ),
+                ],
             ),
 
-            endDrawer: MenuDrawer(),
+            endDrawer: const MenuDrawer(),
 
             body: widget.selectionView(currentViewIndex),
 
@@ -73,8 +148,13 @@ class _Menu_ViewState extends State<Menu_View>
             (
                 fixedColor: BLACK,
                 unselectedItemColor: GREY,
+
                 showUnselectedLabels: true,
                 currentIndex: currentViewIndex,
+
+                elevation: 1,
+                
+
                 onTap: (int index)
                 {
                     setState(() 
@@ -86,23 +166,27 @@ class _Menu_ViewState extends State<Menu_View>
                 [
                     BottomNavigationBarItem
                     (
-                        icon: Icon(Icons.house,),
+                        icon: Icon(Icons.house, size: 30),
                         label: "Accueil",
+                        backgroundColor: WHITE,
                     ),
                     BottomNavigationBarItem
                     (
-                        icon: Icon(Icons.rowing,),
+                        icon: Icon(Icons.rowing, size: 30),
                         label: "Match",
+                        backgroundColor: WHITE,
                     ),
                     BottomNavigationBarItem
                     (
-                        icon: Icon(Icons.emoji_events,),
+                        icon: Icon(Icons.emoji_events, size: 30),
                         label: "Ligue",
+                        backgroundColor: WHITE,
                     ),
                     BottomNavigationBarItem
                     (
-                        icon: Icon(Icons.person,),
+                        icon: Icon(Icons.person, size: 30),
                         label: "Profil",
+                        backgroundColor: WHITE,
                     ),
                 ],
             ),

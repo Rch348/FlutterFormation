@@ -11,12 +11,18 @@ class Match_View extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return Column
+        return ListView
         (
             children: 
             [
-                Tombola_Card(),
-                Tombola_Card(),
+                Tombola_Card
+                (
+                    isOpen: true,
+                ),
+                Tombola_Card
+                (
+                    isOpen: false,
+                ),
             ],
         );
     }

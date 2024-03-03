@@ -3,142 +3,109 @@
 
 import 'package:flutter/material.dart';
 import 'package:goldencup/data/application_colors.dart';
+import 'package:goldencup/views/match/widgets/open_state.dart';
+import 'package:goldencup/views/match/widgets/show_participants.dart';
+import 'package:goldencup/views/match/widgets/tombola_participation_state.dart';
 
 class Tombola_Card extends StatelessWidget
 {
-    const Tombola_Card({super.key});
+    final bool isOpen;
+
+    const Tombola_Card({
+        super.key,
+        this.isOpen = true,
+    });
     
     @override
     Widget build(BuildContext context)
     {
-        return Card
+        return Container
         (
             margin: EdgeInsets.all(16),
-            color: WHITE,
-            surfaceTintColor: WHITE,
-
-            child: Container
+            child:  Column
             (
-                padding: EdgeInsets.all(8),
-                child: Column
-                (
-                    children: 
-                    [
-                        Row
-                        (
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: 
-                            [
-                                Container
-                                (
-                                    margin: EdgeInsets.all(8),
-                                    child: Text
-                                    (
-                                        "Tombola",
-                                        style: TextStyle
-                                        (
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w500,
-                                        ),
-                                    ),
-                                ),
-                                
-                                Container
-                                (
-                                    padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                                    decoration: BoxDecoration
-                                    (
-                                        color: BLUE_LIGHT,
-                                        borderRadius: BorderRadius.all(Radius.circular(4)),
-                                    ),
+                children:
+                [
+                    Show_Participants
+                    (
+                        amount: 5,
+                    ),
 
-                                    child: Text
-                                    (
-                                        "Ouvert",
-                                        style: TextStyle
-                                        (
-                                            color: BLUE,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w300,
-                                        ),
-                                    ),
-                                )
+                    Container
+                    (
+                        decoration: BoxDecoration
+                        (
+                            boxShadow: 
+                            [
+                                BoxShadow
+                                (
+                                    color: GREY_LIGHT_MAIS_PAS_TROP,
+                                    blurRadius: 16,
+                                ),
                             ],
                         ),
-
-                        SizedBox(height: 24),
-
-                        Text
+                        child: Card
                         (
-                            "Participe, tu seras peut-être tiré au sort !",
-                            style: TextStyle
+                            color: WHITE,
+                            surfaceTintColor: WHITE,
+
+                            child: Container
                             (
-                                fontSize: 16,
-                                color: GREY_DARK,
-                            ),
-                        ),
-
-                        SizedBox(height: 24),
-
-                        Row
-                        (
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: 
-                            [
-                                SizedBox
+                                padding: EdgeInsets.all(8),
+                                child: Column
                                 (
-                                    width: 140,
-                                    height: 140,
-                                    child: Image.asset
-                                    (
-                                        "assets/images/logo.png",
-                                    ),
-                                ),
-
-                                Column
-                                (
-                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: 
                                     [
-                                        TextButton
+                                        Row
                                         (
-                                            onPressed: () {},
-                                            style: ButtonStyle
-                                            (
-                                                backgroundColor: MaterialStateProperty.all(BLUE_LIGHT),
-                                            ),
-                                            child: Text
-                                            (
-                                                "Lots",
-                                                style: TextStyle
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: 
+                                            [
+                                                Container
                                                 (
-                                                    color: BLACK,
+                                                    margin: EdgeInsets.all(8),
+                                                    child: Text
+                                                    (
+                                                        "Tombola",
+                                                        style: TextStyle
+                                                        (
+                                                            fontSize: 22,
+                                                            fontWeight: FontWeight.w600,
+                                                        ),
+                                                    ),
                                                 ),
+                                                
+                                                Open_State
+                                                (
+                                                    isOpen: isOpen,
+                                                ),
+                                            ],
+                                        ),
+
+                                        SizedBox(height: 16),
+
+                                        Text
+                                        (
+                                            "Participe, tu seras peut-être tiré au sort !",
+                                            style: TextStyle
+                                            (
+                                                fontSize: 16,
+                                                color: GREY_DARK,
                                             ),
                                         ),
-                                        
-                                        TextButton
+
+                                        SizedBox(height: 16),
+
+                                        Tombola_Participation_State
                                         (
-                                            onPressed: () {},
-                                            style: ButtonStyle
-                                            (
-                                                backgroundColor: MaterialStateProperty.all(YELLOW),
-                                            ),
-                                            child: Text
-                                            (
-                                                "Participer",
-                                                style: TextStyle
-                                                (
-                                                    color: BLACK,
-                                                ),
-                                            ),
+                                            canParticipate: isOpen,
                                         ),
                                     ],
-                                )
-                            ],
-                        )
-                    ],
-                ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ],
             ),
         );
     }
