@@ -25,6 +25,8 @@ class MyTrip extends StatelessWidget {
       // home: City(),
       initialRoute: '/',
       // routes: appRoutes,
+
+      // Routes nommées.
       routes: {
 
         '/' : (context) {
@@ -34,6 +36,8 @@ class MyTrip extends StatelessWidget {
         // '/city' : (context) => CityView(),
         
       },
+
+      // Routes nommées avec passage de données.
       onGenerateRoute: (settings) {
         if(settings.name == CityView.routeName){
           final City city = settings.arguments as City;
@@ -41,6 +45,8 @@ class MyTrip extends StatelessWidget {
         }
         return null;
       },
+
+      // Route par défault.
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (context) => NotFound());
       },

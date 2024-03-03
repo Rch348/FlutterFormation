@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/activity_model.dart';
 
@@ -6,7 +8,8 @@ class TripActivityList extends StatelessWidget {
   final Function(String) deleteTripActivity;
 
   const TripActivityList(
-      {super.key, required this.activities, required this.deleteTripActivity});
+      {super.key, required this.activities, required this.deleteTripActivity}
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -18,24 +21,44 @@ class TripActivityList extends StatelessWidget {
           child: ListTile(
             leading: CircleAvatar(
               // backgroundImage: AssetImage(activity.image),
-              backgroundImage: AssetImage(activities[index].image),
+              backgroundImage: AssetImage(
+                activities[index].image
+              ),
             ),
             // title: Text(activity.name),
-            title: Text(activities[index].name),
-            subtitle: Text(activities[index].city),
+            title: Text(
+              activities[index].name
+            ),
+            subtitle: Text(
+              activities[index].city
+            ),
             trailing: IconButton(
               icon: Icon(
                 Icons.delete,
                 color: Colors.purple,
               ),
               onPressed: () {
-                deleteTripActivity(activities[index].id);
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('Activité supprimée'),
-                  backgroundColor: Colors.blue[200],
-                  duration: Duration(seconds: 4),
-                  action: SnackBarAction(label: 'Annuler', textColor: Colors.black, onPressed: () {},)
-                ));
+                deleteTripActivity(
+                  activities[index].id
+                );
+                ScaffoldMessenger
+                  .of(context)
+                  .showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        'Activité supprimée'
+                      ),
+                      backgroundColor: Colors.blue[200],
+                      duration: Duration(
+                        seconds: 4
+                      ),
+                      action: SnackBarAction(
+                        label: 'Annuler', 
+                        textColor: Colors.black, 
+                        onPressed: () {},
+                      )
+                    )
+                  );
               },
             ),
           ),

@@ -23,16 +23,17 @@ class MyTrip extends StatelessWidget {
       // home: HomeView(),
       // home: City(),
 
-      // Définit le point de départ de l'application.
+      // Route nommée définissant le point de départ de l'application.
       initialRoute: '/',
       
       // Définition des noms des routes :
       routes: {
-
+        // 1ère route : HomeView().
         '/' : (context) {
           return HomeView();
         },
 
+        // 2ème route : CityView().
         '/city' : (context) {
           return CityView();
         },

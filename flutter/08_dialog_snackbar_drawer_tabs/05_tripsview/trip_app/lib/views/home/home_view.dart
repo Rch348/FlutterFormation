@@ -1,7 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/models/city_model.dart';
 import 'package:trip_app/shared_widgets/tripdrawer.dart';
-import 'package:trip_app/views/city/city_view.dart';
+// import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/widgets/city_card.dart';
 import 'package:trip_app/datas/data.dart' as data;
 
@@ -21,9 +23,13 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         // leading: const Icon(Icons.home),
-        title: const Text('MyTrip'),
+        title: const Text(
+          'MyTrip'
+        ),
         actions: const [
-          Icon(Icons.more_vert),
+          Icon(
+            Icons.more_vert
+          ),
         ],
       ),
       drawer: TripDrawer(),
@@ -42,18 +48,24 @@ class _HomeViewState extends State<HomeView> {
         items: [
           BottomNavigationBarItem(
             icon: IconButton(
-                icon: Icon(Icons.home),
+                icon: Icon(
+                  Icons.home
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeView()),
+                    MaterialPageRoute(
+                      builder: (context) => HomeView()
+                    ),
                   );
                 }),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-                icon: Icon(Icons.location_city),
+                icon: Icon(
+                  Icons.location_city
+                ),
                 onPressed: () {
                   // Navigator.push(
                   //   context,
@@ -63,7 +75,9 @@ class _HomeViewState extends State<HomeView> {
             label: 'Villes',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.motorcycle),
+            icon: Icon(
+              Icons.motorcycle
+            ),
             label: 'MoveTo',
           ),
         ],

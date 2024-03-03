@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:trip_app/shared_widgets/tripdrawer.dart';
 
@@ -14,12 +16,17 @@ class _TripsViewState extends State<TripsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mes voyages'),
+        title: Text(
+          'Mes voyages'
+        ),
       ),
       drawer: TripDrawer(),
       body: Container(
         alignment: Alignment.center,
-        child: Text('TripsView'),),
+        child: Text(
+          'TripsView'
+        ),
+      ),
     );
   }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 import 'package:trip_app/datas/data.dart' as data;
@@ -82,7 +84,11 @@ class _CityViewState extends State<CityView> {
   void setDate() {
     showDatePicker(
       context: context,
-      initialDate: DateTime.now().add(Duration(days: 1)),
+      initialDate: DateTime
+        .now()
+        .add(
+          Duration(days: 1)
+        ),
       firstDate: DateTime.now(),
       lastDate: DateTime(2025),
     ).then((newDate) {
@@ -119,10 +125,13 @@ class _CityViewState extends State<CityView> {
         context: context,
         builder: (context) {
           return SimpleDialog(
-            title: Text('Voulez-vous sauvegarder votre voyage ?'),
+            title: Text(
+              'Voulez-vous sauvegarder votre voyage ?'
+            ),
             contentPadding: EdgeInsets.all(10),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15)
+            ),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -130,14 +139,20 @@ class _CityViewState extends State<CityView> {
 
                   TextButton(
                     onPressed: () {},
-                    child: Text('Annuler'),
+                    child: Text(
+                      'Annuler'
+                    ),
                   ),
 
                   SizedBox(width: 24,),
 
                   FilledButton(
-                    onPressed: () {Navigator.pop(context, 'save');},
-                    child: Text('Sauvegarder'),
+                    onPressed: () {
+                      Navigator.pop(context, 'save');
+                    },
+                    child: Text(
+                      'Sauvegarder'
+                    ),
                   ),
                 ],
               )
@@ -145,7 +160,9 @@ class _CityViewState extends State<CityView> {
           );
         }).then((result) {
           // print(result);
-          Navigator.pushNamed(context, HomeView.routeName);
+          Navigator.pushNamed(
+            context, 
+            HomeView.routeName);
         });
   }
 
@@ -191,8 +208,14 @@ class _CityViewState extends State<CityView> {
     return Scaffold(
       appBar: AppBar(
         // leading: Icon(Icons.arrow_back),
-        title: Text('Organisation voyage'),
-        actions: [Icon(Icons.more_vert)],
+        title: Text(
+          'Organisation voyage'
+        ),
+        actions: [
+          Icon(
+            Icons.more_vert
+          )
+        ],
       ),
       drawer: TripDrawer(),
       body: Container(
@@ -212,27 +235,34 @@ class _CityViewState extends State<CityView> {
                       activities: widget.activities,
                       selectedActivities: mytrip.activities,
                       toggleActivity: toggleActivity,
-                    )
+                  )
                   : TripActivityList(
                       activities: tripActivities,
-                      deleteTripActivity: deleteTripActivity),
+                      deleteTripActivity: deleteTripActivity
+                  ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: saveTrip,
-        child: Icon(Icons.save),
+        child: Icon(
+          Icons.save
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.map),
+            icon: Icon(
+              Icons.map
+            ),
             label: 'Découverte',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.stars),
+            icon: Icon(
+              Icons.stars
+            ),
             label: 'Mes activités',
           ),
         ],

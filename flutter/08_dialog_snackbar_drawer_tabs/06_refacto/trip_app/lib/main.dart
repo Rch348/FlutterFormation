@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:trip_app/models/city_model.dart';
 import 'package:trip_app/models/trip_model.dart';
-import 'package:trip_app/routes.dart';
+// import 'package:trip_app/routes.dart';
 import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/home_view.dart';
 import 'package:trip_app/views/not_found/not_found.dart';
@@ -43,25 +43,34 @@ class _MyTripState extends State<MyTrip> {
       routes: {
         HomeView.routeName: (context) => HomeView(cities: widget.cities),
       },
-      onGenerateRoute: (settings) {
-        switch (settings.name) {
+      onGenerateRoute: (settings) 
+      {
+        switch (settings.name) 
+        {
           case CityView.routeName:
-            {
-              return MaterialPageRoute(builder: (context) {
-                final City city = settings.arguments as City;
-                return CityView(
-                  city: city,
-                  addTrip: addTrip,
-                );
-              });
-            }
+          {
+              return MaterialPageRoute
+              (
+                builder: (context) 
+                {
+                  final City city = settings.arguments as City;
+                  return CityView
+                  (
+                    city: city,
+                    addTrip: addTrip,
+                  );
+                }
+              );
+          }
           case TripsView.routeName:
-            {
-              return MaterialPageRoute(builder: (context) => TripsView());
-            }
+          {
+            return MaterialPageRoute(builder: (context) => TripsView());
+          }
         }
+        return null;
       },
-      onUnknownRoute: (settings) {
+      onUnknownRoute: (settings) 
+      {
         return MaterialPageRoute(builder: (context) => NotFound());
       },
     );

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:trip_app/models/trip_model.dart';
@@ -37,7 +39,10 @@ class TripOverview extends StatelessWidget {
           Text(
             cityName,
             style:
-                TextStyle(fontSize: 24, decoration: TextDecoration.underline),
+                TextStyle(
+                  fontSize: 24, 
+                  decoration: TextDecoration.underline
+                ),
           ),
           SizedBox(
             height: 30,
@@ -47,11 +52,17 @@ class TripOverview extends StatelessWidget {
               Expanded(
                 child: Text(
                   DateFormat('d/M/y').format(trip.date),
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(
+                    fontSize: 20
+                  ),
                 ),
               ),
               ElevatedButton(
-                  onPressed: setDate, child: Text('Sélectionner une date'))
+                  onPressed: setDate, 
+                  child: Text(
+                    'Sélectionner une date'
+                  )
+              )
             ],
           ),
           SizedBox(
@@ -62,11 +73,16 @@ class TripOverview extends StatelessWidget {
               Expanded(
                   child: Text(
                 'Montant/personne',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(
+                  fontSize: 20
+                ),
               )),
               Text(
                 '$amount €',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 20, 
+                  fontWeight: FontWeight.bold
+                ),
               )
             ],
           )

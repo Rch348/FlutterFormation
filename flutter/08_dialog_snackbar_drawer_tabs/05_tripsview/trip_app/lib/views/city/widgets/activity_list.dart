@@ -21,12 +21,14 @@ class ActivityList extends StatelessWidget {
       mainAxisSpacing: 4,
       crossAxisSpacing: 4,
       children: activities
-          .map((activity) => ActivityCard(
-                activity: activity,
-                isSelected: selectedActivities.contains(activity.id),
-                toggleActivity: () => toggleActivity(activity.id)
-              ))
-          .toList(),
+        .map(
+          (activity) => ActivityCard(
+            activity: activity,
+            isSelected: selectedActivities.contains(activity.id),
+            toggleActivity: () => toggleActivity(activity.id)
+          )
+        )
+        .toList(),
     );
   }
 }
