@@ -1,11 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ClicView extends StatefulWidget 
 {
-   const ClicView(
+   const ClicView
+   (
       {
          super.key
       }
@@ -102,9 +103,9 @@ class _ClicViewState extends State<ClicView>
                         (
                            child: FloatingActionButton.extended
                            (  
-                              backgroundColor: Colors.grey.shade900,
+                              backgroundColor: Colors.grey.shade800,
                               foregroundColor: Colors.grey.shade300,
-                              splashColor: Colors.red.shade900,
+                              splashColor: Colors.red.shade800,
                               onPressed: incrementCompteur, 
                               label: Text
                               (

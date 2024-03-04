@@ -4,64 +4,42 @@ import 'package:trip_app/shared_widgets/tripdrawer.dart';
 // import 'package:trip_app/views/city/city_view.dart';
 import 'package:trip_app/views/home/widgets/city_card.dart';
 
-class HomeView extends StatefulWidget 
-{
+class HomeView extends StatefulWidget {
   static const String routeName = '/';
   final List<City> cities;
 
-  const HomeView
-  (
-    {
-      super.key, required this.cities
-    }
-  );
+  const HomeView({super.key, required this.cities});
 
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> 
-{
+class _HomeViewState extends State<HomeView> {
   @override
-  Widget build(BuildContext context) 
-  {
-    return Scaffold
-    (
-      appBar: AppBar
-      (
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
         // leading: const Icon(Icons.home),
-        title: const Text
-        (
-          'MyTrip'
-        ),
-        actions: const 
-        [
-          Icon
-          (
-            Icons.more_vert
-          ),
+        title: const Text('MyTrip'),
+        actions: const [
+          Icon(Icons.more_vert),
         ],
       ),
       drawer: const TripDrawer(),
-      body: Container
-      (
-        padding: const EdgeInsets.all(10),
-        color: Colors.grey[100],
-        child: SingleChildScrollView
-        (
-          child: Column
-          (
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: 
-            [
-              for (var city in widget.cities) CityCard(city: city),
-            ],
-          ),
-        )
-      ),
+      body: Container(
+          padding: const EdgeInsets.all(10),
+          color: Colors.grey[100],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (var city in widget.cities) CityCard(city: city),
+              ],
+            ),
+          )),
       // bottomNavigationBar: BottomNavigationBar
       // (
-      //    items: 
+      //    items:
       //    [
       //       BottomNavigationBarItem
       //       (
@@ -71,7 +49,7 @@ class _HomeViewState extends State<HomeView>
       //             (
       //                Icons.home
       //             ),
-      //             onPressed: () 
+      //             onPressed: ()
       //             {
       //                Navigator.push
       //                (
@@ -93,7 +71,7 @@ class _HomeViewState extends State<HomeView>
       //             (
       //                Icons.location_city
       //             ),
-      //             onPressed: () 
+      //             onPressed: ()
       //             {
       //             // Navigator.push(
       //             //   context,
