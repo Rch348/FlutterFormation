@@ -9,70 +9,86 @@ import 'package:trip_app/views/not_found/not_found.dart';
 import 'package:trip_app/views/trips/trips_view.dart';
 import 'package:trip_app/datas/data.dart' as data;
 
-void main() {
-  runApp(MyTrip());
+void main() 
+{
+   runApp(MyTrip());
 }
 
-class MyTrip extends StatefulWidget {
-  final List<City> cities = data.cities;
-  MyTrip({super.key});
+class MyTrip extends StatefulWidget 
+{
+   // Stockage de la liste 'cities' du fichier 'data.dart' dans une variable 'cities' (de type liste).
+   final List<City> cities = data.cities;
+      
+   MyTrip({super.key});
 
-  @override
-  State<MyTrip> createState() => _MyTripState();
+   @override
+   State<MyTrip> createState() => _MyTripState();
 }
 
-class _MyTripState extends State<MyTrip> {
+class _MyTripState extends State<MyTrip> 
+{
 
-  List<Trip> trips = [];
-  
-  void addTrip(Trip trip){
-    setState(() {
-      trips.add(trip);
-    });
+   List<Trip> trips = [];
+   
+   void addTrip(Trip trip)
+   {
+      setState
+      (
+         () 
+         {
+            trips.add(trip);
+         }
+      );
   }
 
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) 
+  {
+    return MaterialApp
+    (
       debugShowCheckedModeBanner: false,
       // home: HomeView(),
       // home: City(),
       initialRoute: '/',
       // routes: appRoutes,
-      routes: {
-        HomeView.routeName: (context) => HomeView(cities: widget.cities),
+      routes: 
+      {
+         HomeView.routeName: (context) => HomeView(cities: widget.cities),
       },
       onGenerateRoute: (settings) 
       {
-        switch (settings.name) 
-        {
-          case CityView.routeName:
-          {
-              return MaterialPageRoute
-              (
-                builder: (context) 
-                {
-                  final City city = settings.arguments as City;
-                  return CityView
-                  (
-                    city: city,
-                    addTrip: addTrip,
-                  );
-                }
-              );
-          }
-          case TripsView.routeName:
-          {
-            return MaterialPageRoute(builder: (context) => const TripsView());
-          }
-        }
-        return null;
-      },
-      onUnknownRoute: (settings) 
-      {
-        return MaterialPageRoute(builder: (context) => const NotFound());
-      },
-    );
-  }
+         switch (settings.name) 
+         {
+            case CityView.routeName:
+            {
+               return MaterialPageRoute
+               (
+                  builder: (context) 
+                  {
+                     final City city = settings.arguments as City;
+                     return CityView
+                     (
+                        city: city,
+                        addTrip: addTrip,
+                     );
+                  }
+               );
+            }
+            case TripsView.routeName:
+            {
+               return MaterialPageRoute(builder: (context) => const TripsView());
+            }
+         }
+         return null;
+         },
+         onUnknownRoute: (settings) 
+         {
+            return MaterialPageRoute
+            (
+               builder: (context) => const NotFound()
+            );
+         },
+      );
+   }
 }

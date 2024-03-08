@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -79,7 +79,8 @@ class _ClicViewState extends State<ClicView>
                            ),
                         ]   
                      ),
-                     Row(
+                     Row
+                     (
                         mainAxisAlignment: MainAxisAlignment.center,         
                         children: 
                         [
