@@ -11,5 +11,6 @@ class Activity {
     required this.image,
     required this.city,
     required this.price,
-  });
+  }
+  );
 }

@@ -7,16 +7,20 @@
 import 'package:flutter/material.dart';
 import 'package:my_trip06_refacto/views/city/city.dart';
 
-void main() {
-  runApp(MyTrip());
+void main() 
+{
+   runApp(MyTrip());
 }
 
-class MyTrip extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: City(),
+class MyTrip extends StatelessWidget 
+{
+   @override
+   Widget build(BuildContext context) 
+   {
+      return MaterialApp
+      (
+         debugShowCheckedModeBanner: false,
+         home: City(),
       );
-  }
+   }
 }

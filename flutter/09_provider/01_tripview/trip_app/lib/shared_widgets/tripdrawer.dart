@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:trip_app/views/home/home_view.dart';
 import 'package:trip_app/views/trips/trips_view.dart';
 
-class TripDrawer extends StatelessWidget {
+class TripDrawer extends StatelessWidget 
+{
   const TripDrawer({super.key});
 
   @override
@@ -23,7 +24,10 @@ class TripDrawer extends StatelessWidget {
             ),
             child: const Text(
               'Trip',
-              style: TextStyle(color: Colors.white, fontSize: 30),
+              style: TextStyle
+              (
+                color: Colors.white, fontSize: 30
+              ),
             ),
           ), 
           ListTile(

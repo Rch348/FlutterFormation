@@ -39,48 +39,51 @@ class _MyTripState extends State<MyTrip>
             trips.add(trip);
          }
       );
-  }
+   }
 
 
-  @override
-  Widget build(BuildContext context) 
-  {
-    return MaterialApp
-    (
-      debugShowCheckedModeBanner: false,
-      // home: HomeView(),
-      // home: City(),
-      initialRoute: '/',
-      // routes: appRoutes,
-      routes: 
-      {
-         HomeView.routeName: (context) => HomeView(cities: widget.cities),
-      },
-      onGenerateRoute: (settings) 
-      {
-         switch (settings.name) 
+   @override
+   Widget build(BuildContext context) 
+   {
+      return MaterialApp
+      (
+         debugShowCheckedModeBanner: false,
+         // home: HomeView(),
+         // home: City(),
+         initialRoute: '/',
+         // routes: appRoutes,
+         routes: 
          {
-            case CityView.routeName:
+            HomeView.routeName: (context) => HomeView(cities: widget.cities),
+         },
+         onGenerateRoute: (settings) 
+         {
+            switch (settings.name) 
             {
-               return MaterialPageRoute
-               (
-                  builder: (context) 
-                  {
-                     final City city = settings.arguments as City;
-                     return CityView
-                     (
-                        city: city,
-                        addTrip: addTrip,
-                     );
-                  }
-               );
+               case CityView.routeName:
+               {
+                  return MaterialPageRoute
+                  (
+                     builder: (context) 
+                     {
+                        final City city = settings.arguments as City;
+                        return CityView
+                        (
+                           city: city,
+                           addTrip: addTrip,
+                        );
+                     }
+                  );
+               }
+               case TripsView.routeName:
+               {
+                  return MaterialPageRoute
+                  (
+                     builder: (context) => const TripsView()
+                  );
+               }
             }
-            case TripsView.routeName:
-            {
-               return MaterialPageRoute(builder: (context) => const TripsView());
-            }
-         }
-         return null;
+            return null;
          },
          onUnknownRoute: (settings) 
          {

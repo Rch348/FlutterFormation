@@ -5,7 +5,8 @@ import 'package:flutter/widgets.dart';
 
 class ClicView extends StatefulWidget 
 {
-   const ClicView(
+   const ClicView
+   (
       {
          super.key
       }
@@ -33,10 +34,7 @@ class _ClicViewState extends State<ClicView>
 
    void ajouterScore(compteur) 
    {
-      Map 
-      (
-
-      );
+      {}
    }
 
    @override
@@ -95,7 +93,7 @@ class _ClicViewState extends State<ClicView>
                         ],
                      ),
                         
-                     Container
+                     SizedBox
                      (
                         height: 150,
                         width: 150,
@@ -103,9 +101,9 @@ class _ClicViewState extends State<ClicView>
                         (
                            child: FloatingActionButton.extended
                            (  
-                              backgroundColor: Colors.grey.shade900,
+                              backgroundColor: Colors.grey.shade800,
                               foregroundColor: Colors.grey.shade300,
-                              splashColor: Colors.red.shade900,
+                              splashColor: Colors.red.shade800,
                               onPressed: incrementCompteur, 
                               label: Text
                               (

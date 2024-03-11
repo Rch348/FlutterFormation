@@ -19,7 +19,8 @@ class _TripsViewState extends State<TripsView> {
       drawer: const TripDrawer(),
       body: Container(
         alignment: Alignment.center,
-        child: const Text('TripsView'),),
+        child: const Text('TripsView'),
+      ),
     );
   }
 }
