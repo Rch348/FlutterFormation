@@ -4,10 +4,12 @@ import 'package:pdf/widgets.dart' as pdfWidget;
 import 'package:pdf_app/pdf_editor_service.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,14 +18,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Edit Pdf Page'),
+      home: const MyHomePage(title: 'Flutter Edit Pdf Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   final String title;
-  MyHomePage({key, required this.title}) : super(key: key);
+  const MyHomePage({key, required this.title}) : super(key: key);
 
   
 
@@ -45,12 +47,12 @@ class _MyHomePageState extends State<MyHomePage> {
       left: 0.0,
       top: 0.0,
       child: pdfWidget.Text("COUCOU",
-          style: pdfWidget.TextStyle(fontSize: 32, color: pdf.PdfColors.red)),
+          style: const pdfWidget.TextStyle(fontSize: 32, color: pdf.PdfColors.red)),
     ));
     var centeredText = pdfWidget.Center(
         child: pdfWidget.Text(
       "CENTERED TEXT",
-      style: pdfWidget.TextStyle(
+      style: const pdfWidget.TextStyle(
           fontSize: 40,
           color: pdf.PdfColors.green,
           background: pdfWidget.BoxDecoration(color: pdf.PdfColors.amber)),
@@ -68,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _edit,
         tooltip: 'Load',
-        icon: Icon(Icons.file_download),
-        label: Text("Modify"),
+        icon: const Icon(Icons.file_download),
+        label: const Text("Modify"),
       ),
     );
   }

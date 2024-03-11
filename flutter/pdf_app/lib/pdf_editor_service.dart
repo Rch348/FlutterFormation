@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -13,7 +12,7 @@ class PdfRawImage extends pdfWidgets.ImageProvider
 {
    final Uint8List data;
    final Size size;
-   final pdf.PdfDocument document;
+   pdf.PdfDocument document;
 
 
    PdfRawImage
@@ -47,7 +46,6 @@ class _PdfFileHandler
 {
    static Future<File> getFileFromAssets(String filename) async 
    {
-      assert(filename != null);
       final byteData = await rootBundle.load(filename);
       var name = filename
          .split(Platform.pathSeparator)
@@ -85,13 +83,21 @@ class _PdfFileHandler
             (
                data: rawImage,
                size: Size(size.width.toDouble(), size.height.toDouble()),
+               
             )
          );
       }
       return images;
    }
 
-   static Future<File> save(final pdfWidgets.Document document, final String filename, {required final String directory}) async 
+   static Future<File> save
+   (
+      final pdfWidgets.Document document, 
+      final String filename, 
+      {
+         required final String directory
+      }
+   ) async 
    {
       final dir = directory ?? (await getApplicationDocumentsDirectory()).path;
       final file = File('$dir${Platform.pathSeparator}$filename');
@@ -99,82 +105,107 @@ class _PdfFileHandler
    }
 }
 
-class PdfMutablePage {
-  final PdfRawImage _background;
-  final List<pdfWidgets.Widget> _stackedItems;
+class PdfMutablePage 
+{
+   final PdfRawImage _background;
+   final List<pdfWidgets.Widget> _stackedItems;
 
-  PdfMutablePage({required PdfRawImage background})
-      : _background = background,
-        _stackedItems = [];
+   PdfMutablePage({required PdfRawImage background})
+         : _background = background,
+         _stackedItems = [];
 
-  void add({required pdfWidgets.Widget item}) {
-    _stackedItems.add(item);
-  }
+   void add({required pdfWidgets.Widget item}) 
+   {
+      _stackedItems.add(item);
+   }
 
-  Size get size => _background.size;
+   Size get size => _background.size;
 
-  pdfWidgets.Page build(pdfWidgets.Document document) {
-    _background.document = document.document;
-    final format = pdf.PdfPageFormat(
-        _background.size.width, _background.size.height);
-    return pdfWidgets.Page(
-        pageFormat: format,
-        orientation: pdfWidgets.PageOrientation.portrait,
-        build: (context) {
-          return pdfWidgets.Stack(
-            children: [
-              pdfWidgets.Image(_background),
-              ..._stackedItems,
-            ],
-          );
-        });
-  }
+   pdfWidgets.Page build(pdfWidgets.Document document) 
+   {
+      _background.document = document.document;
+      final format = pdf.PdfPageFormat(_background.size.width, _background.size.height);
+      return pdfWidgets.Page
+      (
+         pageFormat: format,
+         orientation: pdfWidgets.PageOrientation.portrait,
+         build: (context) 
+         {
+            return pdfWidgets.Stack
+            (
+               children: 
+               [
+                  pdfWidgets.Image(_background),
+                  ..._stackedItems,
+               ],
+            );
+         }
+         );
+   }
 }
 
-class PdfImageProvider extends ImageProvider {
-  @override
-  ImageStreamCompleter load(Object key, Future<
-      Codec> Function(Uint8List bytes, {bool allowUpscaling, int cacheHeight, int cacheWidth}) decode) {
-    // TODO: implement load
-    throw UnimplementedError();
-  }
+class PdfImageProvider extends ImageProvider 
+{
+   @override
+   ImageStreamCompleter load
+   (
+      Object key, Future<Codec> Function
+      (
+         Uint8List bytes, 
+         {
+            bool allowUpscaling, 
+            int cacheHeight, 
+            int cacheWidth
+         }
+      ) decode
+   ) 
+   {
+      // TODO: implement load
+      throw UnimplementedError();
+   }
 
-  @override
-  Future<Object> obtainKey(ImageConfiguration configuration) {
-    // TODO: implement obtainKey
-    throw UnimplementedError();
-  }
+   @override
+   Future<Object> obtainKey(ImageConfiguration configuration) 
+   {
+      // TODO: implement obtainKey
+      throw UnimplementedError();
+   }
 
 }
 
-class PdfMutableDocument {
-  String _filePath;
-  final List<PdfMutablePage> _pages;
+class PdfMutableDocument 
+{
+   final String _filePath;
+   final List<PdfMutablePage> _pages;
 
-  PdfMutableDocument._({required List<PdfMutablePage> pages, required String filePath})
-      : _pages = pages ?? [],
-        _filePath = filePath;
+   PdfMutableDocument._({required List<PdfMutablePage> pages, required String filePath})
+         : _pages = pages ?? [],
+         _filePath = filePath;
 
-  static Future<PdfMutableDocument> asset(String assetName) async {
-    var copy = await _PdfFileHandler.getFileFromAssets(assetName);
-    final rawImages = await _PdfFileHandler.loadPdf(copy.path);
-    final pages = rawImages.map((raw) => PdfMutablePage(background: raw))
-        .toList();
-    return PdfMutableDocument._(
-        pages: pages, filePath: copy.uri.pathSegments.last);
-  }
+   static Future<PdfMutableDocument> asset(String assetName) async 
+   {
+      var copy = await _PdfFileHandler.getFileFromAssets(assetName);
+      final rawImages = await _PdfFileHandler.loadPdf(copy.path);
+      final pages = rawImages.map((raw) => PdfMutablePage(background: raw)).toList();
+      return PdfMutableDocument._(pages: pages, filePath: copy.uri.pathSegments.last);
+   }
 
-  void addPage(PdfMutablePage page) => _pages.add(page);
+   void addPage(PdfMutablePage page) => _pages.add(page);
 
-  PdfMutablePage getPage(int index) => _pages[index];
+   PdfMutablePage getPage(int index) => _pages[index];
 
-  pdfWidgets.Document build() {
-    var doc = pdfWidgets.Document();
-    _pages.forEach((page) => doc.addPage(page.build(doc)));
-    return doc;
-  }
+   pdfWidgets.Document build() 
+   {
+      var doc = pdfWidgets.Document();
+      for (var page in _pages) 
+      {
+         doc.addPage(page.build(doc));
+      }
+      return doc;
+   }
 
-  Future<void> save({required String filename}) async {
-    _PdfFileHandler.save(build(), filename, directory: '');
-  }
+   Future<void> save({required String filename}) async 
+   {
+      _PdfFileHandler.save(build(), filename, directory: '');
+   }
 }
