@@ -1,4 +1,5 @@
 {
     "editor.indentSize": "tabSize",
-    "editor.guides.indentation": true
+    "editor.guides.indentation": true,
+    "git.ignoreLimitWarning": true
 }

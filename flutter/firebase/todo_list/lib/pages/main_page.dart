@@ -24,8 +24,7 @@ class MainPage extends StatefulWidget
 }
 
 
-
-   class _MainPageState extends State<MainPage> 
+class _MainPageState extends State<MainPage> 
 {
    
    final FirestoreService firestore = FirestoreService();
