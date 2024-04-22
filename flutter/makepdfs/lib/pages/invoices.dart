@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:makepdfs/models/invoice.dart';
 import 'package:makepdfs/pages/detail.dart';
@@ -150,7 +152,8 @@ class Estimate extends StatefulWidget
 class _EstimateState extends State<Estimate>
 {
 
-
+   final coordClient = TextEditingController();
+   final numChrono = TextEditingController();
 
    @override
    Widget build(BuildContext context)
@@ -174,12 +177,31 @@ class _EstimateState extends State<Estimate>
                ),
                TextField
                (
+                  controller: coordClient,
                   // decoration: InputDecoration
                   // (
                   //    border: 
                   // ),
                   maxLines: 4,
                ),
+
+               Text
+               (
+                  'Saisir le numéro chrono :'
+               ),
+               TextField
+               (
+                  controller: numChrono,
+                  maxLines: 1,
+               ),
+
+               
+
+               FloatingActionButton
+               (
+                  onPressed: (){}
+                  //Navigator.push(context, )
+               )
 
             ],
          ),

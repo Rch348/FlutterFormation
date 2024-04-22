@@ -1,0 +1,63 @@
+*
+{
+   box-sizing: border-box;
+}
+
+.box
+{
+   width: 250px;
+   height: 250px;
+}
+
+.c_1
+{
+   background-color: lightblue;
+   float: left;
+}
+
+.c_2
+{
+   background-color: lightgreen;
+   float: left;
+}
+
+.c_3
+{
+   background-color: pink;
+   float: left;
+}
+
+.c_4
+{
+   background-color: lightsalmon;
+   float: left;
+}
+
+.c_5
+{
+   background-color: lightslategray;
+   float: left;
+}
+
+.c_6
+{
+   background-color: lightcyan;
+   height: 400px;
+   width: 350px;
+   margin: 4% auto;
+   position: relative;
+}
+
+img
+{
+   width: 350px;
+}
+
+.category
+{
+   background-color: lightseagreen;
+   padding: 12px;
+   position: absolute;
+   top: 24px;
+   left: -20px;
+}

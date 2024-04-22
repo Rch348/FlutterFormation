@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Les formulaires</title>
+</head>
+<body>
+   
+   <h1 style="text-decoration: underline; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Les formulaires</h1>
+
+   <!-- Méthode "get" : transmet les données en clair via l'URL (utilisé pour de la recherche ou du filtrage pour nous)-->
+   <!-- Méthode "post" : transmet les données de façon cachée/masquée -->
+   <!-- Attribut "action" : action envoyant les données -->
+   <form action="traitement.php" method="post">
+
+      <div>
+         <!-- Attribut "for" du label doit correspondre à l'id de l'input et permet de placer le focus sur le champ associé lors du clic sur le label -->
+         <label for="nomfor">Nom</label>
+         <!-- Attribut "name" : récupère la donnée associée à la clé de l'association du tableau stockant la donnée (très important car lié à la clé)-->
+         <!-- Attribut "value" : pré-remplit le champ -->
+         <input type="text" name="nom" id="nomfor" placeholder="Votre nom" required>
+      </div>
+
+      <div>
+         <label for="prenomid">Prénom</label>
+         <input type="text" name="prenom" id="prenomid" required>
+      </div>
+
+      <div>
+         <label for="email">Email</label>
+         <input type="email" name="email" id="email" required>
+      </div>
+
+      <div>
+         <label for="mdpid">Mot de passe</label>
+         <input type="password" name="mdp" id="mdpid" required>
+      </div>
+
+      <p>Compétences</p>
+      <div>
+         <!-- Mettre le même "name" pour le groupe de réponse -->
+         <!-- Attribut "value" : permet de récupérer la donnée associée à la valeur de l'association du tableau stockant la donnée -->
+         <input type="checkbox" name="competence" id="php" value="php" checked>
+         <label for="php">PHP</label>
+         <input type="checkbox" name="competence" id="js" value="js">
+         <label for="js">JS</label>
+         <input type="checkbox" name="competence" id="css" value="css">
+         <label for="css">CSS</label>
+      </div>
+
+      <p>Autres</p>
+      <div>
+         <input type="checkbox" name="lavaisselle" id="lavaisselle" value="lavaisselle" checked>
+         <label for="lavaisselle">La vaisselle</label>
+         <input type="checkbox" name="cuillere" id="cuillere" value="cuillere">
+         <label for="cuillere">Cuillère</label>
+         <input type="checkbox" name="couteau" id="couteau" value="couteau">
+         <label for="couteau">Couteau</label>
+      </div>
+      
+      <p>Genre</p>
+      <div>
+         <!-- Attribut "value" : permet de récupérer la donnée associée à la valeur de l'association du tableau stockant la donnée -->
+         <input type="radio" name="sex" id="woman" value="woman" checked>
+         <label for="woman">Femme</label>
+         <input type="radio" name="sex" id="man" value="man">
+         <label for="man">Homme</label>
+         <input type="radio" name="sex" id="other" value="other">
+         <label for="other">Non </label>
+      </div>
+
+   <br>
+
+      <div>
+         <label for="birth">Date de naissance</label>
+         <input type="date" name="birth" id="birth">
+      </div>
+
+   <br>
+
+      <div>
+         <!-- Attribut "accept" : spécifie le type de fichier accepté afin de vérifier le poids son poid -->
+         <input type="file" name="cv" id="cv" accept=".jpg, .jpeg, .png">
+      </div>
+
+   <br>
+
+      <div>
+         <input type="color" name="color" id="color">
+      </div>
+
+   <br>
+
+      <div>
+         <input type="range" name="price" id="price" min="0" max="100" value="25">
+      </div>
+
+   <br>
+
+      <div>
+         <label for="msg">Message</label>
+         <textarea name="msg" id="msg" cols="34" rows="10"></textarea>
+      </div>
+
+   <br>
+
+      <div>
+         <!-- <select> : Utilisation si + de 4/5 réponses possibles -->
+         <label for="pays">Nationalité</label>
+         <select name="pays" id="pays">
+            <option value="fr">France</option>
+            <option value="es">Espagne</option>
+            <option value="p">Portugal</option>
+            <option value="an">Angleterre</option>
+         </select>
+      </div>
+   <br>
+
+      <div>
+         <label for="job">Métier</label>
+         <select name="job" id="job">
+            <optgroup label="dev">
+               <option value="devback">Développeur Back End</option>
+               <option value="devfront">Développeur Back Front</option>
+               <option value="devfull">Développeur Full Stack</option>
+            </optgroup>
+            <optgroup label="design">
+               <option value="desui">Designer UI</option>
+               <option value="desweb">Designer Web</option>
+               <option value="desux">Designer UX</option>
+            </optgroup>
+         </select>
+      </div>
+
+   <br>
+
+      <div>
+         <!-- Possibilité de mettre <button> mais <input> + courte -->
+         <input type="reset" value="Reset">
+         <input type="submit" value="Envoyer">
+      </div>
+
+   </form>
+
+</body>
+</html>

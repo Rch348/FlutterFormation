@@ -1,0 +1,14 @@
+/* Pour cibler un élément unique => #id */
+/* Pour cibler plusieurs éléments => .classe */
+
+h1
+{
+   /* Propriétés CSS => color (nom): aqua (valeur); */
+   color: aqua;
+   background-color: aquamarine;
+}
+
+/* p
+{
+   color: cadetblue;
+} */
