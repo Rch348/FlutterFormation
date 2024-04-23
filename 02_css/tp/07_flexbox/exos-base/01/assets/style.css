@@ -1,0 +1,65 @@
+body
+{
+   display: flex;
+}
+
+.container
+{
+   height: 100vh;
+   width: 1920px;
+   color: #fff;
+   font-size: 79px;
+   font-weight: 800;
+   padding-top: 34px;
+   text-align: center;
+}
+
+.f1
+{
+   background-color: salmon;
+}
+
+.f2
+{
+   background-color: lightblue;
+}
+
+.f3
+{
+   background-color: yellow;
+}
+
+.f4
+{
+   background-color: lightgreen;
+}
+
+.f5
+{
+   background-color: blueviolet;
+}
+
+.f6
+{
+   background-color: black;
+}
+
+.f7
+{
+   background-color: orange;
+}
+
+.f8
+{
+   background-color: grey;
+}
+
+@media screen and (max-width: 914px)
+{
+   .container
+   {
+      height: 50vh;
+      max-width: 952px;
+   }
+}
+  

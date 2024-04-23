@@ -11,7 +11,7 @@
 
 body
 {
-   background-color: rgba(238, 238, 238, 1);
+   background-color: #eee;
    font-family: "Poppins", sans-serif;
    font-size: 16px;
    font-style: normal;
@@ -34,7 +34,7 @@ input, label
    margin-bottom: 32px;
 }
 
-.text-center
+.txt-center
 {
    text-align: center;
 }
@@ -71,9 +71,9 @@ h1
 {
    line-height: 40px;
    background-color: #33c3f0;
+   border-radius: 3px;
    border: 1px solid #33c3f0;
    color:#fff;
-   font-size: 16px;
    font-weight: 600;
    margin-top: 0px;
    cursor: pointer;
@@ -102,6 +102,6 @@ h1
 
 .link:hover
 {
-   color: #1D6F87;
+   /* color: #1D6F87; */
    text-decoration: underline;
 }
