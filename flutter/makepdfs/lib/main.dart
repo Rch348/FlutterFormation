@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget
          (
             primarySwatch: Colors.blue,
          ),
-         // home: Estimate(),
+         home: InvoicePage(),
       );
    }
 }

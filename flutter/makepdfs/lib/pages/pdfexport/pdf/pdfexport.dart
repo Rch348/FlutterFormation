@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, prefer_const_literals_to_create_immutables
 
 // import 'dart:html';
+import 'package:intl/intl.dart';
 import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:makepdfs/models/invoice.dart';
@@ -269,7 +270,7 @@ Future<Uint8List> makePdf(Invoice invoice) async
                                                 fontWeight: FontWeight.bold,
                                                 letterSpacing: 0.3
                                              ),
-                                             text: '20/03/2024'
+                                             text: DateFormat('d/M/y')
                                           )
                                        ],
                                        style: TextStyle

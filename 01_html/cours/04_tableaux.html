@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <!-- border déprécié -->
+   <!-- cellpadding : marge interne des cellules -->
+   <!-- cellspacing : marge externe entre chaque cellule -->
+   <table border="1" cellpadding="10" cellspacing="20">
+      <!-- Corps du tableau dans lequel on trouve les <tr> et <td> représentant les données -->
+      <tbody>
+         <!-- tr : table row => 1 ligne du tableau -->
+         <tr>
+            <!-- colspan : étend une cellule sur 2 colonnes différentes -->
+            <td colspan="2">1</td>
+            <td>2</td>
+         </tr>
+         <tr>
+            <!-- rowspan : étend une cellule sur 2 lignes différentes-->
+            <td rowspan="2">3</td>
+            <td>4</td>
+            <td>5</td>
+         </tr>
+         <tr>
+            <td colspan="2">6</td>
+         </tr>
+      </tbody>
+   </table>
+
+   <br>
+   <br>
+   <!-- border-collapse : fusionne les bordures du tableau -->
+   <table border="3" cellpadding="10" style="border-collapse: collapse; background-color: aqua;">
+      <thead>
+         <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+         </tr>
+      </thead>
+      <tfoot>
+         <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+         </tr>
+      </tfoot>
+      <tbody>
+         <tr>
+            <td>Doe</td>
+            <td>John</td>
+         </tr>
+         <tr>
+            <td>Doe</td>
+            <td>Jane</td>
+         </tr>
+      </tbody>
+   </table>
+
+</body>
+</html>

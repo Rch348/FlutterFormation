@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inscription</title>
+</head>
+<body>
+   <header>
+      <h1>Inscription</h1>
+   </header>
+   <hr>
+   <form action="" method="post">
+      <input type="radio" name="genre" value="femme" id="femme">
+      <label for="femme">Femme</label>
+      <input type="radio" name="genre" value="homme" id="homme">
+      <label for="Homme">Homme</label>
+      <input type="radio" name="genre" value="autre" id="autre">
+      <label for="Non genré">Non genré</label>
+      <br>
+      <br>
+      <div>
+         <label for="email">Email</label>
+         <br>
+         <input type="email" name="email" id="email" required />
+      </div>
+      <br>
+      <div>
+         <label for="mdp">Mot de passe</label>
+         <br>
+         <input type="password" name="mdp" id="mdp" required />
+      </div>
+      <br>
+      <div>
+         <label for="naissance">Date de naissance</label>
+         <br>
+         <input type="number" name="jour" id="jour" min="1" max="31" placeholder="Jour" />
+         <br>
+         <input type="month" id="mois">
+         <select name="mois" id="mois">
+            <option value="">Mois</option>
+            <option value="Janvier">Janvier</option>
+            <option value="Février">Février</option>
+            <option value="Mars">Mars</option>
+            <option value="Avril">Avril</option>
+            <option value="Mai">Mai</option>
+            <option value="Juin">Juin</option>
+            <option value="Juillet">Juillet</option>
+            <option value="Août">Août</option>
+            <option value="Septembre">Septembre</option>
+            <option value="Octobre">Octobre</option>
+            <option value="Novembre">Novembre</option>
+            <option value="Décembre">Décembre</option>
+         </select>
+         <br>
+         <input type="number" name="année" id="année" min="1800" max="2124" placeholder="Année" />
+
+      </div>
+      <br>
+      <input type="submit" value="S'inscrire" />
+      <br>
+      <br>
+      <br>
+      <a href="04_connexion.html">Déjà un compte ? Connectez-vous</a>
+   </form>
+</body>
+</html>
