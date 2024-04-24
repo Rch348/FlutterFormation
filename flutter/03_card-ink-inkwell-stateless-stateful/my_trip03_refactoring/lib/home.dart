@@ -2,8 +2,8 @@
 
 /*
   Structure de la page d'accueil => Scaffold (échafaud) contenant :
-  - appBar : barre de navigation supérieure
-  - body : corps de la page contenant une colonne (dans un container) avec les cartes des villes
+  - appBar : barre de navigation supérieure.
+  - body : corps de la page contenant une colonne (dans un container) avec les cartes des villes.
 */
 
 import 'package:flutter/material.dart';

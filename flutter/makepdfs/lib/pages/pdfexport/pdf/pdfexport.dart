@@ -4,12 +4,14 @@
 import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:makepdfs/models/invoice.dart';
+import 'package:makepdfs/pages/invoices.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 Future<Uint8List> makePdf(Invoice invoice) async 
 {
+  //  final String coordClient = coordController;
    final pdf = Document();
    final image = MemoryImage((await rootBundle.load('assets/technical_logo.png')).buffer.asUint8List());
    pdf.addPage
@@ -141,7 +143,7 @@ Future<Uint8List> makePdf(Invoice invoice) async
                                                 // Nom du client
                                                 Text
                                                 (
-                                                   'Mairie',
+                                                   ' Mairie',
                                                    style: TextStyle
                                                    (
                                                       color: PdfColors.grey500,

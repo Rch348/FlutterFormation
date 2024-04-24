@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:makepdfs/models/invoice.dart';
 import 'package:makepdfs/pages/detail.dart';
@@ -150,7 +152,7 @@ class Estimate extends StatefulWidget
 class _EstimateState extends State<Estimate>
 {
 
-
+   final coordController = TextEditingController();
 
    @override
    Widget build(BuildContext context)
@@ -168,19 +170,19 @@ class _EstimateState extends State<Estimate>
          (
             children:
             [
-               Text
-               (
-                  'Saisir les coordonnées du client :'
-               ),
                TextField
                (
-                  // decoration: InputDecoration
-                  // (
-                  //    border: 
-                  // ),
+                  controller: coordController,
+                  decoration: InputDecoration
+                  (
+                     label: Text
+                     (
+                        'Coordonnées client (4 lignes max):'
+                     ),
+                  ),
+                  keyboardType: TextInputType.text,
                   maxLines: 4,
                ),
-
             ],
          ),
       );

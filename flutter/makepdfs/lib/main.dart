@@ -16,12 +16,24 @@ class MyApp extends StatelessWidget
       return MaterialApp
       (
          debugShowCheckedModeBanner: false,
-         title: 'Flutter Demo',
+         initialRoute: '/',
+         routes:
+         {
+            // '/invoices': (context)
+            // {
+            //    return InvoicePage();
+            // },
+            '/': (context)
+            {
+               return Estimate();
+            }
+         },
+         title: 'Devis',
          theme: ThemeData
          (
             primarySwatch: Colors.blue,
          ),
-         home: Estimate(),
+         // home: Estimate(),
       );
    }
 }

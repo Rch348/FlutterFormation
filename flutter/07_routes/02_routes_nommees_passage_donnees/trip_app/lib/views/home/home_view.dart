@@ -53,19 +53,19 @@ class _HomeViewState extends State<HomeView> {
                   );
                 }),
             label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: IconButton(
-                icon: const Icon(Icons.location_city),
-                onPressed: () {
+         ),
+         BottomNavigationBarItem(
+         icon: IconButton(
+               icon: const Icon(Icons.location_city),
+               onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => CityView()),
                   );
                 }),
             label: 'Villes',
-          ),
-          const BottomNavigationBarItem(
+         ),
+         const BottomNavigationBarItem(
             icon: Icon(
               Icons.motorcycle
             ),

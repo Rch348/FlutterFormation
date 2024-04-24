@@ -41,22 +41,22 @@ void main() {
 
   // l'appel de la fonction
   String texte = 'tata';
-  afficherMessage(texte);
+  afficherMessage(texte); // tata
 
   int resultat = somme(2,5);
-  print(resultat);
+  print(resultat); // 7
 
   String bonjour = direBonjour('Ken', 'Roche');
-  print(bonjour);
+  print(bonjour); // Bonjour Ken Roche
 
   String bonjour2 = direBonjour2(nom: 'Roche', prenom: 'Ken');
-  print(bonjour2);
+  print(bonjour2); // Bonjour2 Ken Roche
 
   String bonjour3 = direBonjour3(prenom: 'Ken');
-  print(bonjour3);
+  print(bonjour3); // Bonjour3 Ken Doe
 
-  dynamic bonjour4 = direBonjour4('Ken');
-  print(bonjour4);
+  dynamic bonjour4 = direBonjour4('Ken', 34);
+  print(bonjour4); // Bonjour4 Ken vous avez null ans
 
 }
 
