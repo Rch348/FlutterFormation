@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, prefer_const_literals_to_create_immutables
 
 // import 'dart:html';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
 import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:makepdfs/models/invoice.dart';
-import 'package:makepdfs/pages/invoices.dart';
+// import 'package:makepdfs/pages/invoices.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -270,7 +270,7 @@ Future<Uint8List> makePdf(Invoice invoice) async
                                                 fontWeight: FontWeight.bold,
                                                 letterSpacing: 0.3
                                              ),
-                                             text: DateFormat('d/M/y')
+                                             
                                           )
                                        ],
                                        style: TextStyle

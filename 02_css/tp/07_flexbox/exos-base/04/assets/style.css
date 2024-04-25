@@ -3,44 +3,34 @@
 *
 {
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 body
 {
-   display: flex;
-   flex-direction: column;
-   height: 948px;
-   width: 1375px;
+   font-family: "Montserrat", sans-serif;
+
 }
 
 .container
 {
    display: flex;
-   justify-content: center;
-   align-items: center;
+   flex-wrap: wrap;
+   height: 100vh;
+}
+
+.f
+{
+   align-content: center;
    color: #fff;
-   font-family: "Montserrat", sans-serif;
-   font-size: 90px;
+   flex: 1 1 24%;
+   font-size: 100px;
    font-weight: 600;
-   height: 33vh;
-   margin: 1%;
-   width: 25%;
-}
-
-.c1
-{
-   display: flex;
-}
-
-/* .c2
-{
-   
-   
-} */
-
-.c3
-{
-   display: flex;
+   margin: .5%;
+   text-align: center;
+   text-shadow: 3px 3px 0 rgba(0, 0, 0, .3);
+   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .3);
 }
 
 .f1
@@ -65,17 +55,17 @@ body
 
 .f5
 {
+   align-content: center;
    background-color: blueviolet;
-   display: flex;
-   justify-content: center;
-   align-items: center;
    color: #fff;
+   flex: 1 1 99%;
    font-family: "Montserrat", sans-serif;
-   font-size: 90px;
+   font-size: 100px;
    font-weight: 600;
-   height: 33vh;
-   margin: 1%;
-   width: 98%;
+   margin: .5%;
+   text-align: center;
+   text-shadow: 3px 3px 0 rgba(0, 0, 0, .3);
+   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .3);
 }
 
 .f6
@@ -98,76 +88,40 @@ body
    background-color: lightseagreen;
 }
 
-@media screen and (max-width: 914px)
+/* @media screen and (min-width: 1024px) and (max-width: 1200px)
 {
-   .c1, .c2, .c3
-   {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: stretch;
-      width: 96vw;
-   }
+  .container
+  {
 
-   .container
-   {
-      height: 18vh;
-      margin: 0.6%;
-      width: 46vw;
-   }
+  }
+} */
 
-   .f5
+@media screen and (min-width: 769px) and (max-width: 1024px)
+{
+   .f
    {
-      height: 18vh;
-      margin: 0.6%;
-      width: 93vw;
+      flex: 1 1 49%;
    }
 }
 
-@media screen and (max-width: 632px)
+@media screen and (min-width: 600px) and (max-width: 768px)
 {
-   .c1, .c2, .c3
+   .f
    {
-      display: flex;
-      flex-direction: column;
-      /* flex-wrap: wrap; */
-      align-items: stretch;
-      width: 96%;
+      flex: 1 1 99%;
    }
 
-   .container
-   {
-      height: 85px;
-      margin: 0.3%;
-      width: 44%;
-   }
-
-   .f5
-   {
-      height: 85px;
-      margin: 0.3%;
-   }
 }
 
-@media screen and (max-width: 491px)
+@media screen and (max-width: 599px)
 {
-   .c1, .c2, .c3
+   .f
    {
-      width: 100px; 
-   }
-
-   .container
-   {
-      height: 85px;
-      margin: 0.6%;
-      width: 400px;
+      flex: 1 1 99%;
    }
 
    .f5
    {
-      height: 85px;
-      margin: 0.6%;
-      width: 400px;
       order: 1;
    }
 

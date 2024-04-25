@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*
+{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.container
+{
+   display: flex;
+   flex-direction: column;
+}
+
+header
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex: 1 1 100%;
+}
+
+.bonjour
+{
+   margin: 10px
+}
+
+ul
+{
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+}
+
+li
+{
+   margin: 21px;
+}
+
+.txt
+{
+   font-family: "Roboto", sans-serif;
+}
+
+.t-s
+{
+   font-size: 15px;
+}
+
+.chair-1
+{
+   display: flex;
+   flex-direction: row;
+}
+
+.chair
+{
+   width: 50%;
+}
+
+.chair-txt
+{
+   background-color: #fff;
+   background-size: 50vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+}
+
+h1, h2
+{
+   font-size: 100px;
+}
+
+.bg-fond
+{
+   align-content: center;
+   background-image: url("../img/motif.jpg");
+   height: 40vh;
+}
+
+.fond
+{
+   align-content: center;
+}
+
+.color
+{
+   color: #fff;
+   text-align: center;
+}
+
+.t-f
+{
+   padding: 0 600px;
+   text-align: left;
+}
+
+.chairs
+{
+   height: 50vh;
+   display: flex;
+}
+
+.black
+{
+
+   width: 50%;
+}
+
+.tabouret
+{
+   width: 19%;
+}
+
+.chair-2
+{
+   width: 31%;
+}
+
+h3
+{
+   font-size: 34px;
+   padding: 15px;
+}
+
+.logos
+{
+   display: flex;
+   align-content: center;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 600px;
+}
+
+@media screen and (max-width: 620px)
+{
+   header
+   {
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px;
+   }
+
+   ul
+   {
+      flex-direction: column;
+   }
+
+   li
+   {
+      margin: 0;
+      text-align: right;
+   }
+
+   .chair
+   {
+      display: none;
+   }
+
+   .t-c
+   {
+      background-image: url("../img/chair-1-c.jpg");
+      flex: 1 1 100%;
+      height: 40vh
+   }
+}
+
+
+
+/* .container
+{
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   height: 2291px;
+   width: 620px;
+}
+
+header
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 31px 10px;
+   height: 92px;
+   width: 620px;
+}
+
+.bonjour
+{
+   height: 61px;
+   padding-top: 0;
+   width: 61px;
+}
+
+.chair-1
+{
+
+   background-size: cover;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 170px;
+   height: 833px;
+   width: 620px;
+}
+
+h1, h2
+{
+   font-size: 100px;
+   font-weight: 900;
+   margin-bottom: 0;
+}
+
+nav
+{
+   list-style: none;
+   margin-bottom: 0;
+}
+
+li
+{
+   font-size: 16px;
+   text-align: right;
+}
+
+.txt
+{
+   font-family: "Roboto", sans-serif;
+   font-size: 16px;
+   margin-top: 0;
+}
+
+.fond
+{
+   background-image: url("../img/motif.jpg");
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   padding: 34px;
+   padding-bottom: 89px;
+   height: 494px;
+   width: 620px;
+}
+
+.color
+{
+   color: white;
+}
+
+.size
+{
+   font-size: 100px;
+}
+
+.black
+{
+
+   background-size: cover;
+   height: 179px;
+   width: 620px;
+}
+
+.tabouret
+{
+
+   background-size: cover;
+   height: 179px;
+   width: 620px;
+}
+
+.chair-2
+{
+
+   background-size: cover;
+   height: 179px;
+   width: 620px;
+}
+
+.fond-2
+{
+   background-image: url("../img/motif.jpg");
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 34px;
+   padding-bottom: 89px;
+   height: 494px;
+   width: 620px;
+}
+
+h3
+{
+   display: flex;
+   font-size: 31px;
+}
+
+.brand
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.f-f
+{
+   display: flex;
+   justify-content: center;
+   flex-flow: row wrap;
+   height: 86px;
+   width: 86px;
+}
+
+.kfc
+{
+   height: 64px;
+   padding-top: 3%;
+   padding-bottom: 0%;
+   width: 168px;
+}
+
+.center
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.dom
+{
+   display: flex;
+   justify-content: center;
+} */
