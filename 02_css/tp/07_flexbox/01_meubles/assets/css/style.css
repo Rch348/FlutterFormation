@@ -15,6 +15,7 @@
 
 header
 {
+   background-color: #f5f5f5;
    display: flex;
    flex-direction: row;
    justify-content: space-around;
@@ -23,7 +24,8 @@ header
 
 .bonjour
 {
-   margin: 10px
+   margin: 10px;
+   width: 100px;
 }
 
 ul
@@ -36,6 +38,8 @@ ul
 li
 {
    margin: 21px;
+   /* Line-height : ajuste automatiquement la position du texte dans un bloc au milieu */
+   line-height: 89px;
 }
 
 .txt
@@ -45,7 +49,7 @@ li
 
 .t-s
 {
-   font-size: 15px;
+   font-size: 16px;
 }
 
 .chair-1
@@ -56,6 +60,7 @@ li
 
 .chair
 {
+   object-fit: cover;
    width: 50%;
 }
 
@@ -95,8 +100,9 @@ h1, h2
 
 .t-f
 {
-   padding: 0 600px;
+   /* padding: 0 37%; */
    text-align: left;
+   width: 900px;
 }
 
 .chairs
@@ -107,17 +113,19 @@ h1, h2
 
 .black
 {
-
+  object-fit: cover;
    width: 50%;
 }
 
 .tabouret
 {
+   object-fit: cover;
    width: 19%;
 }
 
 .chair-2
 {
+   object-fit: cover;
    width: 31%;
 }
 
@@ -133,7 +141,7 @@ h3
    align-content: center;
    justify-content: space-between;
    align-items: center;
-   padding: 15px 600px;
+   padding: 15px 37%;
 }
 
 @media screen and (max-width: 620px)
@@ -152,6 +160,7 @@ h3
 
    li
    {
+      line-height: 34px;
       margin: 0;
       text-align: right;
    }
@@ -161,183 +170,78 @@ h3
       display: none;
    }
 
-   .t-c
+   .chair-txt
    {
       background-image: url("../img/chair-1-c.jpg");
+      object-fit: cover;
+      background-repeat: no-repeat;
       flex: 1 1 100%;
-      height: 40vh
+      height: 49vh;
+   }
+
+   .t-a
+   {
+      padding-left: 4%;
+      text-align: left;
+   }
+
+   .t-f
+   {
+      padding: 0 4%;
+   }
+
+   .chairs
+   {
+      flex-direction: column;
+      flex: 1 1 100%;
+      height: 33.333%;
+      /* width: 100%; */
+   }
+
+   /* .black
+   {
+      height: 10vh;
+      width: 100%;
+   }
+
+   .tabouret
+   {
+      height: 10vh;
+      width: 100%;
+   }
+
+   .chair-2
+   {
+      height: 10vh;
+      width: 100%;
+   } */
+
+   .fond-2
+   {
+
+      padding: 0;
+
+   }
+
+   .logos
+   {
+      flex-wrap: wrap;
+      padding: 0;
+      justify-content: center;
+      width: 100vw;
+   }
+
+   .f-f
+   {
+      margin: 0 30px;
    }
 }
 
+@media screen and (max-width: 1679px) {
+  
+   .logos
+   {
+      padding: 4% 18%;
+   }
 
-
-/* .container
-{
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
-   height: 2291px;
-   width: 620px;
 }
-
-header
-{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   padding: 0 31px 10px;
-   height: 92px;
-   width: 620px;
-}
-
-.bonjour
-{
-   height: 61px;
-   padding-top: 0;
-   width: 61px;
-}
-
-.chair-1
-{
-
-   background-size: cover;
-
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding-bottom: 170px;
-   height: 833px;
-   width: 620px;
-}
-
-h1, h2
-{
-   font-size: 100px;
-   font-weight: 900;
-   margin-bottom: 0;
-}
-
-nav
-{
-   list-style: none;
-   margin-bottom: 0;
-}
-
-li
-{
-   font-size: 16px;
-   text-align: right;
-}
-
-.txt
-{
-   font-family: "Roboto", sans-serif;
-   font-size: 16px;
-   margin-top: 0;
-}
-
-.fond
-{
-   background-image: url("../img/motif.jpg");
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-content: center;
-   padding: 34px;
-   padding-bottom: 89px;
-   height: 494px;
-   width: 620px;
-}
-
-.color
-{
-   color: white;
-}
-
-.size
-{
-   font-size: 100px;
-}
-
-.black
-{
-
-   background-size: cover;
-   height: 179px;
-   width: 620px;
-}
-
-.tabouret
-{
-
-   background-size: cover;
-   height: 179px;
-   width: 620px;
-}
-
-.chair-2
-{
-
-   background-size: cover;
-   height: 179px;
-   width: 620px;
-}
-
-.fond-2
-{
-   background-image: url("../img/motif.jpg");
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding: 34px;
-   padding-bottom: 89px;
-   height: 494px;
-   width: 620px;
-}
-
-h3
-{
-   display: flex;
-   font-size: 31px;
-}
-
-.brand
-{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-}
-
-.f-f
-{
-   display: flex;
-   justify-content: center;
-   flex-flow: row wrap;
-   height: 86px;
-   width: 86px;
-}
-
-.kfc
-{
-   height: 64px;
-   padding-top: 3%;
-   padding-bottom: 0%;
-   width: 168px;
-}
-
-.center
-{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-}
-
-.dom
-{
-   display: flex;
-   justify-content: center;
-} */
