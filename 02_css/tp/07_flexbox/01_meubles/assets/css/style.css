@@ -9,42 +9,36 @@
 
 .container
 {
-   display: flex;
-   flex-direction: column;
+   color: #000;
+   font-family: "Roboto", sans-serif;
+   line-height: 1.5;
 }
 
 header
 {
    background-color: #f5f5f5;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   flex: 1 1 100%;
+   padding: 20px;
 }
 
-.bonjour
-{
-   margin: 10px;
-   width: 100px;
-}
-
-ul
+nav
 {
    display: flex;
    flex-direction: row;
-   list-style: none;
+   justify-content: space-between;
+   align-items: center;
+   flex: 1 1 auto;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
-li
+a
 {
-   margin: 21px;
+   display: inline-block;
    /* Line-height : ajuste automatiquement la position du texte dans un bloc au milieu */
    line-height: 89px;
-}
-
-.txt
-{
-   font-family: "Roboto", sans-serif;
+   margin-left: 36px;
+   text-align: right;
+   text-decoration: none;
 }
 
 .t-s
@@ -77,7 +71,9 @@ li
 
 h1, h2
 {
+   font-family: 'Times New Roman', Times, serif;
    font-size: 100px;
+   line-height: 1.2;
 }
 
 .bg-fond
@@ -98,7 +94,7 @@ h1, h2
    text-align: center;
 }
 
-.t-f
+.fond div p
 {
    /* padding: 0 37%; */
    text-align: left;
@@ -138,31 +134,25 @@ h3
 .logos
 {
    display: flex;
-   align-content: center;
-   justify-content: space-between;
+   flex-wrap: wrap;
+   justify-content: center;
    align-items: center;
-   padding: 15px 37%;
+   padding: ;
 }
 
 @media screen and (max-width: 620px)
 {
    header
    {
-      justify-content: space-between;
       align-items: center;
       padding: 14px;
    }
 
-   ul
+   a
    {
-      flex-direction: column;
-   }
-
-   li
-   {
-      line-height: 34px;
+      display: block;
+      line-height: 1.5;
       margin: 0;
-      text-align: right;
    }
 
    .chair
@@ -173,8 +163,8 @@ h3
    .chair-txt
    {
       background-image: url("../img/chair-1-c.jpg");
-      object-fit: cover;
-      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       flex: 1 1 100%;
       height: 49vh;
    }
@@ -193,47 +183,29 @@ h3
    .chairs
    {
       flex-direction: column;
-      flex: 1 1 100%;
+   }
+
+   .chairs>img
+   {
       height: 33.333%;
-      /* width: 100%; */
-   }
-
-   /* .black
-   {
-      height: 10vh;
       width: 100%;
    }
-
-   .tabouret
-   {
-      height: 10vh;
-      width: 100%;
-   }
-
-   .chair-2
-   {
-      height: 10vh;
-      width: 100%;
-   } */
 
    .fond-2
    {
-
-      padding: 0;
-
+      padding: 0 4%;
    }
 
    .logos
    {
       flex-wrap: wrap;
-      padding: 0;
       justify-content: center;
-      width: 100vw;
+      /* width: 100vw; */
    }
 
    .f-f
    {
-      margin: 0 30px;
+      padding: 0 30px;
    }
 }
 
