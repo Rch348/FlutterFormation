@@ -155,7 +155,7 @@ footer > div > p
    width: 245px;
 }
 
-footer > div > button
+footer > div > form > button
 {
    background-color: #ffa632;
    border: 2px solid #fff;
