@@ -1,0 +1,526 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"); => Celle-ci n'est pas tout à fait la même */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+:root
+{
+   --black1: #000829;
+   --red1: #C53135;
+   --black2: #213442;
+   --red2: #E83F43;
+   --black3: rgba(0, 0, 0, .6);
+   --white: #FFF;
+   --transparent: rgba(255, 255, 255, .7);
+   --lightgrey: #E9EBED;
+   --shadow: 0 4px 4px rgba(0, 0, 0, .25);
+   --darkgrey: #4D5D68;
+}
+
+*
+{
+   box-sizing: border-box;
+   font-size: 2rem;
+   letter-spacing: .1px;
+   line-height: 3rem;
+   margin: 0;
+   padding: 0;   
+
+}
+
+html
+{
+   color: var(--black2);
+   font-family: 'Barlow', sans-serif;
+   font-size: 62.5%;
+   font-weight: 400;
+   text-transform: capitalize;
+}
+
+body
+{
+   line-height: 3rem;
+   font-size: 2rem;
+}
+
+a
+{
+   color: inherit;
+   text-decoration: none;
+}
+
+h2
+{
+   font-size: 5.6rem;
+   font-weight: 700;
+   line-height: 5.8rem;
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+h2 + p
+{
+   margin-bottom: 8rem;
+}
+
+
+
+/* ------ UTILITAIRES ------ */
+
+.active
+{
+   color: var(--red2);
+}
+
+.btn
+{
+   background-color: var(--red2);
+   border-radius: 3px;
+   color: var(--white);
+   font-weight: 700;
+   gap: 1rem;
+   height: 6rem;
+   letter-spacing: .2px;
+   padding: 15px 32px;
+   text-align: center;
+   transition: all .7s ease-out;
+}
+
+.btn:hover
+{
+   background-color: var(--red1);
+}
+
+.d-flex
+{
+   display: flex;
+}
+
+.lower
+{
+   text-transform: lowercase;
+}
+
+.pad1
+{
+   padding: 10rem 24rem;
+}
+
+.radius6
+{
+   border-radius: 6px;
+}
+
+.size16
+{
+   font-size: 1.6rem;
+}
+
+.size18
+{
+   font-size: 1.8rem;
+}
+
+.size24
+{
+   font-size: 2.4rem;
+}
+
+.txt-center
+{
+   text-align: center;
+}
+
+.weight7
+{
+   font-weight: 700;
+}
+
+
+
+/* ------ HEADER ------ */
+
+header
+{
+   background-color: var(--white);
+   box-shadow: var(--shadow);
+   height: 7rem;
+   padding: 1.8rem 26rem;
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
+
+nav
+{
+   justify-content: space-between;
+}
+
+nav > a
+{
+   color: var(--black1);
+   line-height: 2.88rem;
+}
+
+.dot
+{
+   color: var(--red2);
+}
+
+ul
+{
+   gap: 3.2rem;
+   line-height: 7rem;
+   list-style: none;
+}
+
+
+
+/* ------ HERO / EXPLORE ------ */
+
+h1
+{
+   font-size: 6.4rem;
+   line-height: 7.6rem;
+}
+
+.hero
+{
+   height: 100vh;
+   background: url(../img/hero-bkg\ 1.jpg) no-repeat center center/cover;
+   margin: 6rem auto 0;
+   padding-top: 31rem;
+}
+
+.hero div
+{
+   background-color: var(--transparent);
+   border-radius: 6px;
+   flex-direction: column;
+   min-height: 33.2rem;
+   justify-content: space-between;
+   margin: 0 auto;
+   padding: 3rem;
+   max-width: 76rem;
+}
+
+.hero > div > p
+{
+   line-height: 3.6rem;
+}
+
+.hero > div > a
+{
+   width: 25.9rem;
+}
+
+
+
+/* ------ TOURS ------ */
+
+.tours
+{
+   min-height: 126.8rem;
+}
+
+.cards
+{
+   flex-wrap: wrap;
+   gap: 10rem;
+}
+
+.card
+{
+   color: var(--white);
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: end;
+   height: 38rem;
+   border-radius: 6px;
+   padding: 3.2rem 3.7rem;
+   width: 64rem;
+}
+
+.history
+{
+   background: url(../img/history-img.jpg);
+}
+
+.natural
+{
+   background: url(../img/natural-img.jpg);
+}
+
+.cultural
+{
+   background: url(../img/cultural-img.jpg);
+}
+
+.animal
+{
+   background: url(../img/matthieu-img.jpg);
+}
+
+h3
+{
+   font-size: 3.6rem;
+   letter-spacing: .3px;
+   line-height: 5.4rem;
+   margin-bottom: 1.6rem;
+   text-align: end;
+}
+
+
+
+/* ------ WHERE ------ */
+
+.where
+{
+   min-height: 149.8rem;
+   padding: 10rem 0;
+}
+
+.tiles
+{
+   flex-wrap: wrap;
+}
+
+.tile
+{
+   color: var(--white);
+   height: 48rem;
+   width: 47.5rem;
+}
+
+.meguro
+{
+   background: url(../img/meguro-river.jpg);   
+}
+
+.kinkaku
+{
+   background: url(../img/Kinkaku-ji.jpg);
+}
+
+.fushimi
+{
+   background: url(../img/Fushimi-Inari.jpg);
+}
+
+.himeji
+{
+   background: url(../img/Himeji-Castle.jpg);
+}
+
+.byodoin
+{
+   background: url(../img/Byodoin.jpg);
+}
+
+.arashiyama
+{
+   background: url(../img/Arashiyama-Bamboo-Forest.jpg);
+}
+
+.nachi
+{
+   background: url(../img/Nachi-san.jpg);
+}
+
+.torii
+{
+   background: url(../img/torii-gate.jpg);
+}
+
+.caption
+{
+   align-items: center;
+   align-self: self-end;
+   background-color: var(--black3);
+   color: var(--white);
+   flex-direction: column;
+   height: 7.6rem;
+   justify-content: center;
+   letter-spacing: 1.8px;
+   line-height: 2.2rem;
+   max-width: 47.5rem;
+}
+
+h4
+{
+   text-transform: uppercase;
+}
+
+.view-more
+{
+   justify-content: center;
+}
+
+.where > div > a
+{
+   margin: 9rem auto 0;
+   text-align: center;
+}
+
+
+
+/* ------ "WE TAKE CARE" ------ */
+
+.care
+{
+   min-height: 56.6rem;
+
+}
+
+.articles
+{
+   flex-wrap: wrap;
+   gap: 4.1rem;
+   justify-content: center;
+}
+
+.article
+{
+   min-height: 17.2rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 44.5rem;
+}
+
+.article > img
+{
+   padding-bottom: 2.4rem;
+}
+
+h5
+{
+   margin-bottom: 2rem;
+}
+
+.article > p
+{
+   line-height: 2.4rem;
+}
+
+
+
+/* ------ "WIN" ------ */
+
+.win
+{
+   min-height: 48.8rem;
+}
+
+form
+{
+   gap: 4rem;
+   justify-content: center;
+}
+
+input
+{
+   background-color: var(--lightgrey);
+   border: none;
+   gap: 4rem;
+   height: 6rem;
+   padding-left: 1.6rem;
+   width: 43.2rem;
+}
+
+input[placeholder]
+{
+   color: var(--darkgrey);
+   text-transform: capitalize;
+}
+
+form > a
+{
+   width: 15.9rem;
+}
+
+
+
+/* ------ FOOTER ------ */
+
+footer
+{
+   background-color: var(--black2);
+   color: var(--white);
+   height: 9rem;
+   justify-content: center;
+   line-height: 2.4rem;
+   align-items: center;
+}
+
+.jap
+{
+   text-transform: capitalize;
+}
+
+
+
+/* ------ MEDIA QUERIES ------ */
+
+@media (max-width: 1919px)
+{
+   .tours, .care, .win
+   {
+      padding: 10rem;
+   }
+}
+
+@media (max-width: 1200px)
+{
+   header
+   {
+      padding: 2rem 10rem;
+   }
+
+   nav
+   {
+      align-items: center;
+   }
+}
+
+@media (max-width: 849px)
+{
+   header
+   {
+      padding: 2rem;
+   }
+
+   ul
+   {  
+      gap: 1.8rem;
+   }
+
+   ul li a, .btn
+   {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+   }
+
+   .tours, .care, .win
+   {
+      padding: 3rem;
+   }
+
+   h2 + p
+   {
+      margin-bottom: 3rem;
+   }
+}
+
+@media (max-width: 579px)
+{
+   header
+   {
+      height: 12rem;
+      padding: 1.9rem;
+   }
+
+   .menu
+   {
+      flex-wrap: wrap;
+   }
+}
