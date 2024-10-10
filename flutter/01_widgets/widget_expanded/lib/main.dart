@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget
                color: Colors.red,
                height: 150.0,
             ),
-            // Expanded s'étale sur tout l'espace disponible et récupère en + les autres espaces sur l'écran
+            // Expanded s'étale sur tout l'espace disponible et récupère en + les autres espaces sur l'écran.
             Expanded
             (
                child: Container

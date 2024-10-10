@@ -5,7 +5,7 @@ import 'package:trip_app/views/city/city.dart';
 
 void main() {
 
-  // Bloquer le telephone en mode portrait
+  // // Bloquer le telephone en mode portrait :
   // WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setPreferredOrientations([
   //   DeviceOrientation.portraitDown,

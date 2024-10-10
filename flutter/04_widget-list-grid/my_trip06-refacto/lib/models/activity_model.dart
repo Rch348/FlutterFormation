@@ -1,9 +1,9 @@
 class Activity 
 {
-   String id;
-   String name;
-   String image;
-   String city;
+   final String id;
+   final String name;
+   final String image;
+   final String city;
 
    Activity
    (

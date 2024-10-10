@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 /*
   Ajout de mediaquerie changeant la mise en forme en fonction de l'orientation du téléphone.
   Ajout de la fonction deleteTripActivity pour supprimer les activités sélectionnées grâce à l'icône poubelle.
@@ -30,7 +32,7 @@ class City extends StatefulWidget {
           children: children,
         );
     } else {
-      return Column(children: children,);
+      return Column(children: children);
     }
   }
 
